@@ -1,0 +1,168 @@
+# VPC私网接入 {#concept_yxq_zs5_sdb .concept}
+
+专有网络VPC（Virtual Private Cloud）是您自己独有的的云上私有网络。阿里云提供了针对不同场景的VPC私网接入产品和服务，如高速通道、VPN网关、云企业网和智能接入网关等。
+
+针对各种场景的私网接入需求，阿里云提供了丰富的解决方案，帮助您安全高效地访问部署在不同VPC上的内部应用。
+
+本文介绍了下表中各场景的私网接入方案。
+
+|[VPC互连](cn.zh-CN/最佳实践/VPC私网接入.md#section_wbw_gt5_sdb)|
+|**产品**|**描述**|**优点**|**限制**|
+|高速通道|通过高速通道路由器接口连接两个VPC| 同地域VPC互连免费
+
+ 大带宽
+
+ 即开即用，配置立即生效
+
+ |跨地域VPC互连费用相比VPN网关高一些|
+|VPN网关|通过基于Internet加密的IPsec-VPN隧道实现VPC互连| 低成本
+
+ 安全
+
+ 即开即用，配置立即生效
+
+ |网络延迟和可用性取决于 Internet|
+|[连接本地IDC](cn.zh-CN/最佳实践/VPC私网接入.md#section_klv_ft5_sdb)|
+|**产品**|**描述**|**优点**|**限制**|
+|VPN 网关|通过基于Internet的IPsec-VPN加密隧道连接本地IDC和云上VPC| 成本低
+
+ 安全
+
+ 配置立即生效
+
+ |网络延迟和可用性取决于Internet|
+|高速通道|通过高速通道的物理专线功能连接本地IDC和云上VPC| 网络质量好
+
+ 带宽高
+
+ | 成本高
+
+ 开通时间长
+
+ |
+|云市场VPN软件|在云市场购买VPN网关并部署到VPC内，通过基于Internet的IPsec-VPN 加密隧道连接本地IDC和云上VPC| 安全
+
+ 可自由选择VPN软件
+
+ 配置立即生效
+
+ | 需要自行搭建和维护VPN应用
+
+ 网络延迟和可用性取决于Internet
+
+ |
+|[多站点连接](cn.zh-CN/最佳实践/VPC私网接入.md#section_ub1_r55_sdb)|
+|**产品**|**描述**|**优点**|**限制**|
+|VPN网关（VPN-Hub）|通过VPN网关在多个站点之间建立安全通信。VPN-Hub功能不仅使各个站点可以和云上VPC互通，并且各个站点之间可以彼此通信| 成本低
+
+ 即开即用，配置立即生效
+
+ |-|
+|VPN网关（VPN-Hub）+ 高速通道|通过组合使用VPN网关和高速通道连接世界各地的应用系统和办公地点| 网络质量高
+
+ 即开即用，配置立即生效
+
+ |网络延迟和可用性取决于Internet|
+|[远程接入VPC](cn.zh-CN/最佳实践/VPC私网接入.md#section_hdl_555_sdb)|
+|**产品**|**描述**|**优点**|**限制**|
+|VPN网关（SSL-VPN功能）|通过SSL-VPN功能安全快速地拨号接入云上VPC| 低成本
+
+ 可靠
+
+ 易配置部署
+
+ |-|
+|云市场SSL-VPN软件|云市场购买SSL-VPN软件并部署到VPC后，远程拨号接入阿里云VPN服务器|可选丰富的SSL-VPN软件/镜像| 成本高
+
+ 可靠性低
+
+ 自己搭建、运维
+
+ |
+
+## VPC互连 {#section_wbw_gt5_sdb .section}
+
+您可以在不同的地域的VPC内部署应用，构建多地域服务网络，实现就近提供服务降低网络时延并相互备份提高整个系统的可靠性。
+
+阿里云高速通道和VPN网关都可以实现跨地域或同地域VPC互连。
+
+-   **高速通道**
+
+    高速通道支持同地或跨地域，同账号或跨账号的VPC之间的内网互通。您可以在两个VPC的路由器上分别创建路由器接口，基于骨干网络来搭建高速通道，轻松实现两个VPC之间安全可靠，方便快捷的通信。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/834_zh-CN.png)
+
+-   **VPN网关**
+
+    VPN网关是一款基于Internet，通过加密通道将企业数据中心、企业办公网络、或Internet终端和VPC安全可靠连接起来的服务。您可以通过VPN网关实现跨地域、跨账号VPC互通。您需要分别为互连的VPC创建两个VPN网关和用户网关，然后在VPN网关和用户网关间建立IPsec加密隧道进行私网通信。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/835_zh-CN.png)
+
+
+## 连接本地IDC {#section_klv_ft5_sdb .section}
+
+您可以将云上VPC和本地IDC网络连接起来构建混合云。通过VPC和本地IDC之间安全可靠的连接，并借助阿里云海量的计算、存储、网络、CND、BGP资源，您可按需按量实时地将本地的IT基础架构无缝地扩展到阿里云上，以应对业务波动。
+
+阿里云高速通道和VPN网关都可以实现本地IDC和云上VPC互连。
+
+-   **高速通道**
+
+    高速通道（ Express Connect ）提供专线接入功能。专线接入后，您可以创建一个边界路由器（VBR）将您本地数据中心和阿里云连接起来，构建混合云环境，使云上资源可以绕过公网通过私网访问本地数据中心。
+
+    物理专线的私网连接不通过公网，因此与传统的公网连接相比，物理专线连接更加安全、可靠、速度更快、延迟更低。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/836_zh-CN.png)
+
+-   **VPN网关**
+
+    VPN网关是一款基于Internet，通过加密通道将企业数据中心、企业办公网络、或Internet终端和VPC安全可靠连接起来的服务。VPN网关默认包含了两个不同的网关实例形成主备双机热备，主节点故障时自动切换到备节点。您可以使用IPsec-VPN将本地数据中心和VPC连接起来。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/837_zh-CN.png)
+
+-   **云市场VPN软件**
+
+    阿里云云市场提供丰富的VPN软件或镜像。在云市场购买VPN软件后，部署在您的ECS实例上，配合使用弹性公网IP即可通过Internet和您的本地IDC用户网关进行连接。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/838_zh-CN.png)
+
+
+## 多站点连接 {#section_ub1_r55_sdb .section}
+
+VPN网关的IPsec-VPN功能提供站点到站点的VPN连接。每个VPN网关支持10个IPsec连接。您可以购买一个VPN网关，连接10个位于不同地区的IDC或者办公点。
+
+此外，您可以搭配高速通道，搭建全球办公网络。
+
+-   **多站点连接**
+
+    您可以通过VPN-Hub功能在多个站点之间建立安全通信，使各个站点不仅可以和云上VPC互通，并且远程站点之间可以彼此通信。VPN-Hub连接可满足大型企业在各个办公点之间建立内网通信的需求。
+
+    VPN-Hub功能随VPN网关默认开启，您只需要配置各个办公点到云上的IPsec连接，不需要额外付款或者额外的配置。每个VPN网关最多可支持10个连接，即购买一个VPN网关，就可以将10个不同地点的办公点连接起来。如下图所示，要将上海、杭州、宁波三个办公点连接起来，您只需要创建一个VPN网关，三个用户网，建立三个IPsec连接即可。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/839_zh-CN.png)
+
+-   **搭建高速全球网络**
+
+    您可以通过VPN网关和高速通道连接世界各地的应用系统和办公地点，该方案安全性高、网络质量好、成本低。
+
+    如下图所示，若要实现美国东部和上海各办公点间的互通需求，您可以分别在美国东部和上海的VPC内部署应用系统，VPC间通过高速通道连接，两个地域的办公地点通过IPsec-VPN分别接入到两个VPC。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/840_zh-CN.png)
+
+
+## 远程接入VPC {#section_hdl_555_sdb .section}
+
+VPN网关的SSL-VPN功能提供点到站点的VPN连接，不需要配置客户网关，终端直接接入。您可以将本地内部应用部署在阿里云VPC内，内部员工通过SSL-VPN连接访问内部系统，比如本地IT人员需要内网接入VPC进行运维管理、出差人员需要远程接入VPC访问本地应用。
+
+阿里云VPN网关或云市场VPN软件/镜像都可以实现远程接入VPC。
+
+-   **VPN网关\(SSL-VPN\)**
+
+    您可以使用SSL-VPN功能从客户端远程接入VPC中部署的应用和服务。部署完成后，您仅需要在客户端中加载证书发起连接即可。SSL-VPN服务器默认包含了两个不同的网关实例形成主备双机热备，主节点故障时自动切换到备节点。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2448/841_zh-CN.png)
+
+-   **云市场购买SSL-VPN软件**
+
+    您可以在云市场购买SSL-VPN软件或者镜像，将SSL-VPN服务部署在专有网络内绑定了EIP的ECS实例上，然后就可以从客户端通过Internet拨号接入了。
+
+
