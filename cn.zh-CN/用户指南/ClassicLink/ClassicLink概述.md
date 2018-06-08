@@ -41,7 +41,7 @@
 
     -   需要在经典网络ECS实例中增加192.168.0.0/16指向私网网卡的路由。您可以使用提供的脚本添加路由，单击[此处](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/58095/cn_zh/1502878832385/route192.zip)下载路由脚本。
 
-**注：** 在运行脚本前，请仔细阅读脚本中包含的readme。
+**说明：** 在运行脚本前，请仔细阅读脚本中包含的readme。
 
  |
 
