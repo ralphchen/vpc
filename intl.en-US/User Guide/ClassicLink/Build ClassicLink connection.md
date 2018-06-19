@@ -2,19 +2,19 @@
 
 You can enable the ClassicLink function to build ClassicLink connection, so that an ECS instance in the classic network can communicate with cloud resources in VPC.
 
-For more information, see ClassicLink overview.Make sure that you are aware of the limitations of establishing a connection, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md).
+For more information, see ClassicLink overview.Make sure that you are aware of the limitations of establishing a connection, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
 
 1.   Log on to the [VPC console](https://vpcnext.console.aliyun.com). 
-2.  3.   Select the region of the target VPC, and click the ID of the target VPC. 
-4.   On the VPC Details page, click **Enable ClassicLink**. In the displayed dialog box, click **OK**. 
-5.   Log on to the VPC console. 
-6.   In the left-side navigation pane, click **Instances**. 
-7.   Find the target ECS instance in the classic network, and click** More** \> **Link to VPC**. 
-8.   In the displayed dialog box, select the target VPC and click**OK**. Then click the link to add the ClassicLink security group rule. 
+2.   Select the region of the target VPC, and click the ID of the target VPC. 
+3.   On the VPC Details page, click **Enable ClassicLink**. In the displayed dialog box, click **OK**. 
+4.   Log on to the VPC console. 
+5.   In the left-side navigation pane, click **Instances**. 
+6.   Find the target ECS instance in the classic network, and click** More** \> **Link to VPC**. 
+7.   In the displayed dialog box, select the target VPC and click**OK**. Then click the link to add the ClassicLink security group rule. 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/818_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/818_en-US.png)
 
-9.   On the Security Groups page, click**Configure Rules** in the Actions column of the target security group and then click **Add ClassicLink Rule**. 
+8.   On the Security Groups page, click**Configure Rules** in the Actions column of the target security group and then click **Add ClassicLink Rule**. 
 
     |Configuration|Description|
     |:------------|:----------|
@@ -28,8 +28,8 @@ For more information, see ClassicLink overview.Make sure that you are aware of t
     |**Priority**|Set priority for the rule.  A smaller number represents a higher priority.|
     |**Description**|Enter the description information.|
 
-10.  On the ECS instance list page, click the **Set Display Items** icon and select Link Status. Click**OK**. 
+9.   On the ECS instance list page, click the **Set Display Items** icon and select Link Status. Click**OK**. 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/819_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/819_en-US.png)
 
 
