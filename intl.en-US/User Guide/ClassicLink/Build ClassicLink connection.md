@@ -2,7 +2,7 @@
 
 You can enable the ClassicLink function to build ClassicLink connection, so that an ECS instance in the classic network can communicate with cloud resources in VPC.
 
-For more information, see ClassicLink overview.Make sure that you are aware of the limitations of establishing a connection, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
+For more information, see ClassicLink overview.Make sure that you are aware of the limitations of establishing a connection, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#) and [What is VPC](../../../../intl.en-US/VPC product introduction/What is VPC.md#).
 
 1.   Log on to the [VPC console](https://vpcnext.console.aliyun.com). 
 2.   Select the region of the target VPC, and click the ID of the target VPC. 
