@@ -30,6 +30,10 @@
 
 9.   返回ECS管理控制台，单击右侧的配置图标，在弹出的对话框中勾选**连接状态**，然后单击**确定**查看ECS实例的连接状态。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/819_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/6557_zh-CN.png "自定义列表选项")
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/6556_zh-CN.png "连接状态选项")
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/819_zh-CN.png "已连接状态")
 
 
