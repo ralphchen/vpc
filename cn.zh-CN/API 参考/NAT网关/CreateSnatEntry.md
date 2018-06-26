@@ -37,6 +37,10 @@
 |SourceCIDR|String|是|ECS实例的私网IP，比如：192.168.1.1/32
 
 |
+|SourceVSwitchId|String|是|需要公网访问的交换机的ID。|
+|SourceCIDR|String|否|指定交换机的网段。比如10.0.0.1/24**说明：** 此参数和SourceVSwtichId参数互斥，不能同时出现。如果指定了SourceVSwitchId，则不能指定SourceCIDR参数。如果指定了SourceCIDR参数，则不能指定SourceVSwitchId参数。
+
+|
 |SnatIp|String|否|公网IP地址。多个IP之间逗号隔开。|
 
 ## 返回参数 {#section_ugs_f1g_cz .section}
