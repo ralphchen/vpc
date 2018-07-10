@@ -29,7 +29,7 @@
 
 
  |
-|InstanceChargeType|String|否| EIP的付费方式。取值：E
+|InstanceChargeType|String|否| EIP的付费方式。取值：
 
  -   PrePaid：预付费
 
@@ -47,7 +47,7 @@
  **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
 
  |
-|InstanceChargeType|String|否| 购买时长。取值：
+|Period|String|否| 购买时长。取值：
 
  -   当选择按月付费时，取值范围为 \[1, 9\]
 
