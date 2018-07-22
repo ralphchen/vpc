@@ -18,8 +18,8 @@
  |
 |BandwidthType|String|否| 实例带宽类型，取值：
 
--   Sharing：创建带宽共享型实例
--   Exclusive（默认值）：创建带宽独享型实例
+-   Sharing：查询带宽共享型实例
+-   Exclusive（默认值）：查询带宽独享型实例
 
  |
 |GlobalAccelerationInstanceId|String|否| 全球加速实例的ID。
