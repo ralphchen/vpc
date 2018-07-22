@@ -1,6 +1,6 @@
 # DescribeGlobalAccelerationInstances {#reference_i4w_xmt_ndb .reference}
 
-查询已创建的全球加速实例的列表。
+查询已创建的全球加速实例列表。
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
@@ -14,6 +14,12 @@
 |RegionId|String|是| 全球加速实例所在的地域。
 
  您可以通过调用 DescribeRegions接口获取地域ID。
+
+ |
+|BandwidthType|String|否| 实例带宽类型，取值：
+
+-   Sharing：创建带宽共享型实例
+-   Exclusive（默认值）：创建带宽独享型实例
 
  |
 |GlobalAccelerationInstanceId|String|否| 全球加速实例的ID。
@@ -62,6 +68,29 @@
 |PageNumber|Integer|当前页码。|
 |PageSize|String|每页包含多少条目。|
 |GlobalAccelerationInstances|List|全球加速实例列表的详细信息。|
+
+|名称|类型|描述|
+|:-|:-|:-|
+|RegionId|String|全球加速实例所在的地域。|
+|GlobalAccelerationInstanceId|String|全球加速实例的ID。|
+|IpAddress|Integer|独享型全球加速实例的公网IP。|
+|Status|String|全球加速实例的状态。|
+|Bandwidth|Integer|全球加速实例的带宽峰值。|
+|ChargeType|String|全球加速实例的付费类型：-   PrePaid：预付费
+-   PostPaid：后付费
+
+|
+|InternetChargeType|String|全球加速实例的计费方式。|
+|ServiceLocation|String|全球加速实例的服务区域。|
+|AccelerationLocation|String|全球加速实例的加速区域。|
+|Name|String|全球加速实例的名称。|
+|Description|String|全球加速实例的描述。|
+|CreationTime|String|全球加速实例的创建时间，UTC时间。|
+|OperationLocks|String|全球加速实例的被锁定原因：-   financial：因欠费被锁定。
+-   security：因安全原因被锁定。
+
+|
+|BackendServers|List|全球加速实例的后端服务器的详细信息。|
 
 ## 示例 {#section_ix5_h1g_cz .section}
 
