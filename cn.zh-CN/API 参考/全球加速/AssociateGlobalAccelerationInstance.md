@@ -1,6 +1,6 @@
 # AssociateGlobalAccelerationInstance {#reference_i4w_xmt_ndb .reference}
 
-绑定后端服务实例。
+为独享型实例绑定后端服务器。
 
 调用本接口绑定后端服务实例时，请注意：
 
@@ -12,6 +12,8 @@
 
 -   后端服务实例和全球加速实例需要属于同一个云账号。
 
+-   绑定的后端服务器的地域必须在全球加速实例的服务区域内。
+-   只有独享型全球加速实例支持通过该API绑定后端服务。
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
