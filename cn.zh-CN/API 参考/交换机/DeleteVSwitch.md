@@ -1,37 +1,37 @@
 # DeleteVSwitch {#reference_i4w_xmt_ndb .reference}
 
-Delete a VSwitch.
+删除交换机。
 
-Note the following before deleting a VSwitch:
+调用该接口删除交换机时，请注意：
 
--   Only VSwitches in the available status can be deleted.
+-   删除交换机之前，需要先释放或移走VPC内的所有资源，包括交换机，云产品实例，路由器接口，HAVIP等。
 
--   Before deleting a VSwitch, you must release or remove all cloud product instances and HAVIP instances under the VSwitch.
+-   只有处于Available状态的交换机可以被删除。
 
--   A VSwitch cannot be deleted when the VPC to which it belongs is creating or deleting a VSwitch or route entry.
+-   交换机所在的VPC正在创建/删除交换机或路由条目时，无法删除交换机。
 
-## Request parameters {#section_cch_pjg_mdb .section}
+## 请求参数 {#section_cch_pjg_mdb .section}
 
-|Name|Type|Required|Description|
-|:---|:---|:-------|:----------|
-|Action|String|Yes| The action to perform. Valid value:
+|名称|类型|是否必须|描述|
+|:-|:-|:---|:-|
+|Action|String|Yes| 要执行的操作。 取值：
 
  DeleteVSwitch
 
  |
-|VSwitchId|String|Yes| The ID of the VSwitch to delete.
+|VSwitchId|String|Yes| 要删除的交换机的ID。
 
  |
 
-## Response parameters {#section_ugs_f1g_cz .section}
+## 返回参数 {#section_ugs_f1g_cz .section}
 
-|Name|Type|Description|
-|:---|:---|:----------|
+|名称|类型|描述|
+|:-|:-|:-|
 |RequestId|String|The ID of the request.|
 
-## Example {#section_ix5_h1g_cz .section}
+## 示例 {#section_ix5_h1g_cz .section}
 
-**Request example**
+**请求示例**
 
 ``` {#createVPCpub}
 https://vpc.aliyuncs.com/?Action=DeleteVSwitch
@@ -39,9 +39,9 @@ https://vpc.aliyuncs.com/?Action=DeleteVSwitch
 &CommonParameters
 ```
 
-**Response example**
+**返回示例**
 
--   XML format
+-   XML 格式
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -50,7 +50,7 @@ https://vpc.aliyuncs.com/?Action=DeleteVSwitch
     </DeleteVSwitchResponse>
     ```
 
--   JSON format
+-   JSON 格式
 
     ```
     { 
