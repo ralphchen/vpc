@@ -20,7 +20,7 @@
     -   InternalIp必需属于NAT网关所在的VPC的网段。
     -   只有当InternalIp被一个ECS实例使用且该实例没有绑定EIP时，DNAT条目才生效。若该InternalIp被HAVIP、SLB或RDS等非ECS资源使用，DNAT条目无效，公网流量无法转发到该IP上。
     -   一个公网IP不能同时用于DNAT条目和SNAT条目。
--   一个DNAT表最多可添加40条DNAT条目。
+-   一个DNAT表最多可添加100条DNAT条目。
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
