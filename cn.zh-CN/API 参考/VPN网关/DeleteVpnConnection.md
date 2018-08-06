@@ -18,7 +18,7 @@
  您可以通过调用 DescribeRegions接口获取地域ID。
 
  |
-|SnatTableId|String|是| IPsec连接的ID。
+|VpnConnectionId|String|是| IPsec连接的ID。
 
  |
 
