@@ -59,9 +59,9 @@
  |
 |AutoPay|String|否| 是否自动付费，取值：
 
- -   false：不开启自动续费，生成订单后需要到[订单中心](https://expense.console.aliyun.com/?#/order/list/)完成支付。
+ -   false：不开启自动付费，生成订单后需要到[订单中心](https://expense.console.aliyun.com/?#/order/list/)完成支付。
 
--   true：开启自动续费，自动支付订单。
+-   true：开启自动付费，自动支付订单。
 
 
  **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
