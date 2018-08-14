@@ -24,7 +24,7 @@
 
 -   InUse：已分配
 
--   vailable：可用
+-   Available：可用
 
 
  |

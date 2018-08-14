@@ -78,7 +78,7 @@ Queries the EIP that has been created for the specified region.
 
 -   InUse: The EIP has been bound to a cloud resource.
 
--   vailable: The EIP is not bound to any cloud resources.
+-   Available: The EIP is not bound to any cloud resources.
 
 
  |
