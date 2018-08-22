@@ -70,7 +70,7 @@ Queries the EIP that has been created for the specified region.
 |RegionId|String|The region where the EIP is located.|
 |IpAddress|String|The address of the EIP.|
 |AllocationId|String|The ID of the EIP.|
-|Status|String| The tatus of the EIP:
+|Status|String| The status of the EIP:
 
 -   Associating: The EIP is being bound.
 
