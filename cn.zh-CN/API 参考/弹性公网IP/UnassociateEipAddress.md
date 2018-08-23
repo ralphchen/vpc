@@ -1,6 +1,6 @@
 # UnassociateEipAddress {#reference_i4w_xmt_ndb .reference}
 
-解除EIP与云产品实例的绑定关系。
+将EIP从绑定的云资源上解绑。
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
@@ -14,32 +14,22 @@
 |AllocationId|String|是| EIP的ID。
 
  |
-|InstanceType|String|否| 要绑定的云产品实例的类型，取值：
+|InstanceType|String|否| 要解绑的资源类型，取值：
 
- -   EcsInstance（默认值）：VPC类型的ECS实例
+ -   EcsInstance（默认值）：专有网络的ECS实例
 
-只有处于运行中和已停止状态的ECS实例可以绑定EIP。
-
--   SlbInstance：VPC类型的SLB实例
-
-绑定EIP后，负载均衡实例可以转发来自公网的请求。
+-   SlbInstance：专有网络的SLB实例
 
 -   Nat：NAT网关
 
-如果NAT网关已购买了NAT带宽包，则无法绑定EIP。请提交工单进行处理。
-
 -   HaVip：HAVIP
 
-只有Available或者InUse状态的HaVip可以绑定EIP。
-
-
- 每个ECS实例、负载均衡实例和HAVIP同时只能绑定一个EIP，NAT网关可以绑定多个EIP。
 
  |
-|InstanceId|String|是| 云产品的实例ID。
+|InstanceId|String|是| 要解绑的云产品的实例ID。
 
  |
-|Force|String|是| 是否强制解绑：
+|Force|String|是| 是否强制解绑。取值：
 
 -   False（默认值）
 
@@ -73,8 +63,8 @@ https://vpc.aliyuncs.com/?Action=UnassociateEipAddress
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
-    <UnassociateEipAddressResponse>
-        <RequestId>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</RequestId>
+    	<UnassociateEipAddressResponse>
+    	<RequestId>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</RequestId>
     </UnassociateEipAddressResponse>
     ```
 
