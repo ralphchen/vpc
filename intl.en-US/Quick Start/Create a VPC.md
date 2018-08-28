@@ -11,7 +11,7 @@ To deploy cloud resources in a VPC, you must create at least one VSwitch. Comple
 
     The VPC and the cloud resources to deploy must be in the same region. In this tutorial, **China North 1** is selected.
 
-3.  Click **Create VPC**, configure the VPC and the VSwitch according to the following information, and click **OK**.
+3.  Click **Create VPC**, configure the VPC according to the following information and click **OK**.
 
     |Configuration|Description|
     |:------------|:----------|
@@ -21,7 +21,7 @@ To deploy cloud resources in a VPC, you must create at least one VSwitch. Comple
 In this tutorial, enter **webVPC**.
 
 |
-    |**CIDR**|Select the CIDR block of the VPC.  Limitations on VPC CIDR blocks are as follows:    -   You can use 192.168.0.0/16, 172.16.0.0/12, or 10.0.0.0/8, the three standard CIDR blocks and their subsets. If you want to use a subnet of a standard CIDR block as the IP address range, you must use API to create a VPC.
+    |**CIDR**|Select the CIDR block of the VPC.  Limitations on VPC CIDR blocks are as follows:    -   You can use 192.168.0.0/16, 172.16.0.0/12, or 10.0.0.0/8, the three standard CIDR blocks, or their subnets. If you want to use a subnet of a standard CIDR block as the IP address range, you must use API to create a VPC.
 
     -   If you want to connect a VPC to another VPC or to a local network to build a hybrid cloud, we recommend that you use a subset of the standard CIDR blocks, and make sure that the network mask is no longer than /16.
 
@@ -41,7 +41,7 @@ In this tutorial, enter **webVS**.
     |**Zone**|Select the zone of the VSwitch. In a VPC, VSwitches in different zones can communicate with each other through the intranet.In this tutorial, select **Zone B**.
 
 |
-    |**CIDR**|Enter the CIDR block of the VSwitch. Note the following when specifying the VSwitch CIDR block:    -   The CIDR block of the VSwitch can be the same as that of the VPC to which it belongs, or a subset of the VPC CIDR block.
+    |**CIDR**| Enter the CIDR block of the VSwitch. Note the following when specifying the VSwitch CIDR block:    -   The CIDR block of the VSwitch can be the same as that of the VPC to which it belongs, or a subset of the VPC CIDR block.
 
 For example, if the CIDR block of the VPC is 192.168.0.0/16, the CIDR block of the VSwitch in the VPC can be 192.168.0.0/16, 192.168.0.0/17, …, till 192.168.0.0/29.
 
@@ -61,7 +61,7 @@ In this tutorial, enter **172.16.1.0/12**.
 
 |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2434/807_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2434/1535435060807_en-US.png)
 
 
 ## Step 2 Create an ECS instance {#section_b1n_rhw_rdb .section}
@@ -70,21 +70,21 @@ Complete these steps to create an ECS instance in the created VPC:
 
 1.  In the left-side navigation pane, click **VSwitches**.
 2.  Select the region of the VSwitch. In this tutorial, select **China North 1**.
-3.  Find the created VSwitch, and click**Purchase** \> **Ecs Instance**.
+3.  Find the created VSwitch, and click**Purchase** \> **ECS Instance**.
 4.  Configure the ECS instance and click **Buy Now**.
 
     For network configurations, the following are used in this tutorial:
 
     -   Network Type: Select the created VPC and VSwitch.
     -   Public IP address: Do not allocate.
-5.  Return to the ECS management console to view the created ECS instance.
+5.  Go back to the ECS console to view the created ECS instance.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2434/808_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2434/1535435060808_en-US.png)
 
 
 ## Step 3 Create an EIP {#section_xw3_lkw_rdb .section}
 
-EIP is a public IP address resource that can be independently purchased and held. Complete these steps to create an EIP:
+An Elastic IP \(EIP\) address is a public IP address resource that you can purchase and possess independently. Complete these steps to create an EIP:
 
 1.  In the left-side navigation pane, click **Elastic IP addresses**.
 2.  Select the region of the EIP and click **Create EIP**. In this tutorial, select **China North 1**.
@@ -97,7 +97,7 @@ Complete these steps to bind EIP to the created ECS instance:
 1.  In the left-side navigation pane, click **Elastic IP addresses**.
 2.  Select the region of the EIP address.
 3.  Find the created EIP and click **Bind**.
-4.  In the displayed dialog box, select **ECS Instance** for the **Instance Type**, and select the created ECS instance.
+4.  In the displayed dialog box, select **ECS Instance** as the **Instance Type**, and select the created ECS instance.
 5.  Click **OK**.
 
 ## Step 5 Verification {#section_q5d_smw_rdb .section}
