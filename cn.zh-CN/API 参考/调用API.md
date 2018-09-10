@@ -1,6 +1,6 @@
 # 调用API {#concept_jyw_13k_qdb .concept}
 
-专有网络接口调用是通过向专有网络API的服务端地址发送HTTP GET请求。您需要并按照接口明在请求中加入相应请求参数，调用后系统会返回处理结果。请求及返回结果都使用UTF-8字符集进行编码。
+专有网络接口调用是通过向专有网络API的服务端地址发送HTTP GET请求。您需要并按照接口说明在请求中加入相应请求参数，调用后系统会返回处理结果。请求及返回结果都使用UTF-8字符集进行编码。
 
 ## 请求结构 {#section_mqj_q3f_mdb .section}
 
@@ -43,7 +43,7 @@ https://vpc.aliyuncs.com/?Action=DescribeVpcs
 
 为了确保您的账号安全，建议您使用子账号的身份凭证调用API。如果您使用RAM账号调用专有网络API，您需要为该RAM账号创建、附加相应的授权策略。
 
-专有网络中可授权的资源和接口列表，参见[RAM鉴权](cn.zh-CN/API 参考/RAM鉴权.md#)。
+专有网络中可授权的资源和接口列表，参见[RAM鉴权](intl.zh-CN/API 参考/RAM鉴权.md#)。
 
 ## API签名 {#section_jtc_ymf_mdb .section}
 
