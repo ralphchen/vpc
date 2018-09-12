@@ -15,8 +15,8 @@ The following system route entries are added to the route table after you create
 
 For example, you have created a VPC with the IP address range of 192.168.0.0/16, and two VSwitches with the IP address ranges of 192.168.1.0/24 and 192.168.0.0/24. The following system route entries are automatically added to the route table of the VPC:
 
-|Destination CIDR block|Next hop type|Type|
-|:---------------------|:------------|:---|
+|CIDR Block|Next Hop Type|Type|
+|:---------|:------------|:---|
 |100.64.0.0/10|-|System|
 |192.168.1.0/24|-|System|
 |192.168.0.0/24|-|System|
@@ -29,17 +29,19 @@ You can add custom route entries to override system route entries or route traff
 
     Select this type when you want to access the Internet through the application deployed on the ECS instance.
 
--   VPN Gateway: route traffic destined for a specific IP address range to a VPN Gateway.
+-   VPN Gateway: Route traffic destined for a specific IP address range to a VPN Gateway.
 
     Select this type when you want to connect to a VPC or a local IDC through the VPN Gateway.
 
--   Router Interface \(To VPC\): route traffic destined for a specific IP address range to a VPC.
+-   Router Interface \(To VPC\): Route traffic destined for a specific IP address range to a VPC.
 
     Select this type when you want to connect two VPCs through router interfaces of Express Connect.
 
--   Router Interface \(To VBR\): route traffic destined for a specific IP address range to a VBR.
+-   Router Interface \(To VBR\): Route traffic destined for a specific IP address range to a VBR.
 
     Select this type when you want to connect to a local IDC through a dedicated connection of Express Connect.
+
+-   Secondary ENI: Route traffic destined for a specific IP address range to a secondary ENI.
 
 
 ## Routing rules {#section_dq3_3ny_rdb .section}
@@ -67,7 +69,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:------------|
     |0.0.0.0/0|ECS instance|ECS01|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536308678810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219810_en-US.png)
 
 -   VPC interconnection \(Express Connect\)
 
@@ -85,7 +87,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|Router interface \(To VPC\)|VPC 1|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536308678811_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219811_en-US.png)
 
 
 -   VPC interconnection \(VPN Gateway\)
@@ -96,13 +98,13 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
 
         |Destination CIDR block|Next hop type|Next hop|
         |:---------------------|:------------|:-------|
-        |10.0.0.0/8|VPN Gateway|VPN Gateway 1|
+        |10.0.0.0/8|VPN metric reference|VPN Gateway 1|
 
     -   Custom route entry added in VPC 2
 
         |Destination CIDR block|Next hop type|Next hop|
         |:---------------------|:------------|:-------|
-        |172.25.0.0/12|VPN Gateway|VPN Gateway 2|
+        |172.16.0.0/12|VPN metric reference|VPN Gateway 2|
 
         ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/49002/cn_zh/1515580691775/VPN2VPC.png)
 
@@ -118,18 +120,18 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
 
     -   Custom route entry added in VBR
 
-        |Destination CIDR block|Next Hop type|Next hop|
+        |Destination CIDR block|Next hop type|Next hop|
         |:---------------------|:------------|:-------|
         |192.168.0.0/16|To leased line|Router interface \(RI 3\)|
         |172.16.0.0/12|To VPC|Router interface \(RI 2\)|
 
     -   Custom route entry added in the local network
 
-        |Destination CIDR block|Next Hop type|Next hop|
+        |Destination CIDR block|Next hop type|Next hop|
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|—|Local gateway|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15363086786425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15367372196425_en-US.png)
 
 -   Local connection \(VPN Gateway\)
 
@@ -137,9 +139,9 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
 
     |Destination CIDR block|Next hop type|Next hop|
     |:---------------------|:------------|:-------|
-    |192.168.0.0/16|VPN Gateway|VPN Gateway|
+    |192.168.0.0/16|VPN metric reference|VPN Gateway|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536308678814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219814_en-US.png)
 
 
 ## Add custom route entry {#section_k5r_n5y_rdb .section}
@@ -162,7 +164,9 @@ Applicable to the scenario where traffic destined for the specified network is r
 
     -   **VPN Gateway**: Route the traffic destined for the specified IP address range to the selected VPN Gateway.
 
-Applicable to the scenario where a VPN Gateway is used to connect two VPCs, or connect a VPC to a local IDC.
+    -   **Secondary ENI**：Route the traffic destined for the specified IP address range to the selected secondary ENI.
+
+    -   Applicable to the scenario where a VPN Gateway is used to connect two VPCs, or connect a VPC to a local IDC.
 
     -   **Router Interface \(To VPC\)**: Route the traffic destined for the specified IP address range to the selected VPC.
 
