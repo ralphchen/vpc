@@ -10,7 +10,7 @@ The earlier solutions combined the virtual machine's network with the physical n
 
 ## VPC theory {#section_gtq_q3z_ndb .section}
 
-Based on mainstream tunneling technologies,  VPCs isolate virtual networks. Each VPC has a unique tunnel ID, and a tunnel ID corresponds to only one VPC.  A tunnel encapsulation carrying a unique tunnel ID is added to each data packet transmitted between the ECS instances within a VPC.  Then, the data packet is transmitted over the physical network.  Because the tunnel IDs are different for ECS instances in different VPCs and the IDs are located on two different routing planes, the ECS instances from different VPCs cannot communicate with each other and are isolated by nature. 
+Based on mainstream tunneling technologies,  VPCs isolate virtual networks. Each VPC has a unique tunnel ID, and a tunnel ID corresponds to only one VPC.  A tunnel encapsulation carrying a unique tunnel ID is added to each data packet transmitted between the ECS instances within a VPC.  Then, the data packet is transmitted over the physical network.  Because the tunnel IDs are different for ECS instances in different VPCs and the ECS instances are located on two different routing planes, the ECS instances from different VPCs cannot communicate with each other and are isolated by nature. 
 
 Based on the tunneling and SDN technologies, the Alibaba Cloud research and development team has developed the VPC in the basis of hardware gateways and self-developed switch equipment.
 
@@ -18,5 +18,5 @@ Based on the tunneling and SDN technologies, the Alibaba Cloud research and deve
 
 As shown in the following figure, the VPC architecture contains three main components: VSwitches, gateway, and controller. VSwitches and gateways form the key data path. Controllers use the self-developed protocol to forward the forwarding table to the gateway and VSwitches, completing the key configuration path.  In the overall architecture, the configuration path and data path are separated from each other. VSwitches are distributed nodes, the gateway and controller are deployed in clusters, and all links have redundant disaster recovery. This improves the overall availability of the VPC. 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2428/15354347495013_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2428/15378572465013_en-US.png)
 
