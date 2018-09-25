@@ -1,43 +1,34 @@
 # Scenarios {#concept_fhg_jlz_ndb .concept}
 
-VPC is a completely isolated network environment and can be used in different scenarios.
+VPC applies to scenarios with high requirement on communication security and service availability.
 
-## Scenario 1: Hybrid cloud \(local IDC + cloud\) {#section_nsl_llz_ndb .section}
+## Host applications {#section_fmj_tlz_ndb .section}
 
-If you have the following demands, we recommend that you use the architecture of VPC+[Express Connect](https://www.aliyun.com/product/expressconnect)+[ECS](https://www.aliyun.com/product/ecs)+[RDS](https://www.aliyun.com/product/rds).
+You can host an application that provides external services in a VPC and control Internet access by creating security group rules and whitelist. You can also control the access by isolating the application server from the database. For example, deploy the web server in a subnet that can access the Internet and deploy the database of the application in a subnet without Internet access.
 
--   Place the internal core system and core data in the self-built data center to avoid data disclosure.
--   Deploy applications on the cloud to handle business traffic surge in real time.
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15378597532768_en-US.png)
 
-Architecture description:
+## Host applications requiring the access to the Internet {#section_dtj_vlz_ndb .section}
 
-This is a typical hybrid cloud architecture. Use VPC, RDS, ECS to build your cloud business system and place the core data in your on-premises data center. By using Express Connect to connect your IDC to cloud, data on and under the cloud is interchangeable.
+You can host an application that requires to access the Internet in a subnet of a VPC and route the traffic through NAT Gateway. By configuring SNAT rules, the instance in the subnet can access the Internet without exposing its private IP address and the private IP address can be changed to a public IP address any time to avoid external attacks.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15354348052767_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15378597532769_en-US.png)
 
-## Scenario 2: Security isolation {#section_fmj_tlz_ndb .section}
+## Cross-zone disaster tolerance {#section_nlp_4vh_w2b .section}
 
-If you have the following demands, we recommend that you use the architecture of VPC+[ECS](https://www.aliyun.com/product/ecs)+[RDS](https://www.aliyun.com/product/rds)+[SLB](https://www.aliyun.com/product/slb).
+You can create one or multiple subnets in a VPC by creating VSwitches. Different VSwitches in a VPC can communicate with one another through the intranet. You can deploy resources in VSwitches of different zones to achieve cross-zone disaster tolerance.
 
--   Build a completely isolated business environment on the cloud, because the multi-tenant sharing mechanism in the traditional cloud architecture cannot guarantee data security.
--   Have full control over the private network.
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15378597539780_en-US.png)
 
-Architecture description:
+## Business system isolation {#section_bsg_pvh_w2b .section}
 
-You can create a VPC to deploy your systems. VPC is logically isolated from other virtual networks in Alibaba Cloud.  You have full control over your own VPC, including choosing your preferred IP address range, network segment, route table, and gateway, to achieve safe and easy access to your resources and applications. In addition, you can also establish connections via a leased line or VPN between your VPC and the traditional data center to form an on-demand network environment for smooth app migration to the cloud and expansion of data centers.
+Different VPCs are logically isolated from one another. If you must isolate multiple business systems, such as isolating the production environment from the test environment, you can create multiple VPCs. When the VPCs need to communicate with each other, you can create a peer connection between them.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15354348052768_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15378597539781_en-US.png)
 
-## Scenario 3: Web scraping applications that actively access the Internet {#section_dtj_vlz_ndb .section}
+## Build hybrid cloud {#section_nsl_llz_ndb .section}
 
-If you have the following demands, we recommend that you use the architecture of VPC+[ECS](https://www.aliyun.com/product/ecs)+[NAT Gateway](https://www.aliyun.com/product/nat).
+You can create a dedicated connection to connect your VPC to a local data center to expand your local network. With the dedicated connection, you can seamlessly migrate your local applications to the cloud without changing the way of the application access.
 
--   Allow multiple servers in the Virtual Private Cloud \(VPC\) to actively access to the Internet.
--   Prevent the public IP of these servers from being exposed on the Internet.
-
-Architecture description:
-
-About the architecture: You can implement a SNAT configuration for all the ECSs under the same VSwitch in the VPC to allow several ECSs to access the Internet using a public IP, and this public IP can be replaced anytime to prevent external attacks.
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15354348052769_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13390/15378597532767_en-US.png)
 
