@@ -2,11 +2,9 @@
 
 终止边界路由器（VBR）。
 
-调用该接口后VBR从Enabled状态进入Terminated状态，终止成功后进入Terminated状态。在调用本接口终止VBR之前，请注意：
+调用该接口后VBR从Enabled状态进入Terminated状态，终止成功后进入Terminated状态。
 
--   只有物理专线的所有者可以调用该接口。
-
--   VBR进入Terminated状态后，其VLAN ID会保留7天，7天后其他VBR可以使用该VLAN ID。
+**说明：** 只有物理专线的所有者可以调用该接口。
 
 ## 请求参数 {#section_ulr_rpp_vdb .section}
 
@@ -23,6 +21,11 @@
 
  |
 |VbrId|String|是| VBR的ID。
+
+ |
+|ClientToken|String|否| 客户端token，用于保证请求的幂等性。
+
+ 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。
 
  |
 
