@@ -4,13 +4,13 @@ A VSwitch is a basic network module in a VPC network, used to connect different 
 
 After creating a VPC, you can further segment your virtual private network to one or more subnets by creating VSwitches. The VSwitches within a VPC are interconnected by default. You can deploy different applications to the VSwitches that are located in different zones to improve the service availability.
 
-**Note:** A VSwitch does not support multicast or broadcast. You can achieve multicast proxy by using the multicast agent tool provided by Alibaba Cloud. For more information, see [Configure multicast for Linux kernel](intl.en-US/User Guide/Configure multicast for Linux kernel.md#).
+**Note:** A VSwitch does not support multicast or broadcast. You can achieve multicast proxy by using the multicast agent tool provided by Alibaba Cloud. For more information, see [Configure multicast for Linux kernel](reseller.en-US/User Guide/Configure multicast for Linux kernel.md#).
 
 ## Create VSwitch {#section_hd5_g5x_rdb .section}
 
 To create a VSwitch, complete these steps:
 
-1.  Log on to the [VPC console](https://vpcnext.console.aliyun.com).
+1.  Log on to the [VPC console](https://partners-intl.console.aliyun.com/#/vpc).
 2.  Select the region of the VPC to which the VSwitch belongs.
 3.  In the left-side navigation pane, click **VSwitches**.
 4.  Click **Create VSwitch**, configure the VSwitch according to the following information and click **OK**.
@@ -62,7 +62,7 @@ To create cloud resources in a VSwitch, complete these steps:
 3.  In the left-side navigation pane, click **VSwitches**.
 4.  Locate the target VSwitch, click **Purchase** and select the cloud resources to create.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15354351749789_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15382134129789_en-US.png)
 
 5.  Complete the configuration.
 
@@ -82,17 +82,17 @@ To delete a VSwitch, complete these steps:
 3.  In the left-side navigation pane, click **VSwitches**.
 4.  Locate the target VSwitch, and click **Delete**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15354351749788_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15382134129788_en-US.png)
 
 5.  In the displayed dialog, click **OK**.
 
 ## Related APIs {#section_vhd_xwx_rdb .section}
 
-[CreateVSwitch](../../../../intl.en-US/API reference/VSwitch/CreateVSwitch.md#)
+[CreateVSwitch](../../../../reseller.en-US/API reference/VSwitch/CreateVSwitch.md#)
 
-[DeleteVSwitch](../../../../intl.en-US/API reference/VSwitch/DeleteVSwitch.md#)
+[DeleteVSwitch](../../../../reseller.en-US/API reference/VSwitch/DeleteVSwitch.md#)
 
-[DescribeVSwitches](../../../../intl.en-US/API reference/VSwitch/DescribeVSwitches.md#)
+[DescribeVSwitches](../../../../reseller.en-US/API reference/VSwitch/DescribeVSwitches.md#)
 
-[ModifyVSwitchAttribute](../../../../intl.en-US/API reference/VSwitch/ModifyVSwitchAttribute.md#)
+[ModifyVSwitchAttribute](../../../../reseller.en-US/API reference/VSwitch/ModifyVSwitchAttribute.md#)
 
