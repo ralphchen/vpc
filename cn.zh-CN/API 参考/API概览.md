@@ -67,7 +67,7 @@
 |ModifyForwardEntry|修改指定的DNAT条目。|
 |DeleteForwardEntry|删除指定的DNAT条目。|
 |CreateSnatEntry|在SNAT列表中添加SNAT条目。|
-|DescribeSnatTableEntries|查查询已创建的SNAT条目。|
+|DescribeSnatTableEntries|查询已创建的SNAT条目。|
 |ModifySnatEntry|修改指定的SNAT条目。|
 |DeleteSnatEntry|删除指定的SNAT条目。|
 
