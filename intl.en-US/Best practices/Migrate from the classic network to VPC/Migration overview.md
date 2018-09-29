@@ -23,7 +23,7 @@ You can use the following two methods to migrate your system to a VPC network. Y
 
     If your system is deployed on RDS, SLB, or other cloud products, it is recommended using this solution. It is a seamless migration solution, allowing you to migrate your system to a VPC network without interrupting your services.
 
-    With the ClassicLink function, ECS instances in the classic network can access resources in the VPC network. For more information, see [ClassicLink overview](../../../../intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
+    With the ClassicLink function, ECS instances in the classic network can access resources in the VPC network. For more information, see [ClassicLink overview](../../../../reseller.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
 
 -   Single ECS migration
 
@@ -32,7 +32,7 @@ You can use the following two methods to migrate your system to a VPC network. Y
 
 ## Hybrid access and hybrid addition {#section_qmn_mv5_sdb .section}
 
-The hybrid access and hybrid addition solution is a seamless migration solution. Firstly, you must create the required cloud resources \(such as ECS\) in the VPC network to be migrated to, and then use this method to smoothly migrate your system to the VPC. After all the resources have been migrated to VPC, release the cloud resources in the classic network to complete the whole migration process. For more information, see [Example of hybrid access and hybrid addition migration](intl.en-US/Best practices/Migrate from the classic network to VPC/Example of hybrid access and hybrid addition migration.md#).
+The hybrid access and hybrid addition solution is a seamless migration solution. Firstly, you must create the required cloud resources \(such as ECS\) in the VPC network to be migrated to, and then use this method to smoothly migrate your system to the VPC. After all the resources have been migrated to VPC, release the cloud resources in the classic network to complete the whole migration process. For more information, see [Example of hybrid access and hybrid addition migration](reseller.en-US/Best practices/Migrate from the classic network to VPC/Example of hybrid access and hybrid addition migration.md#).
 
 -   **Hybrid addition**
 
