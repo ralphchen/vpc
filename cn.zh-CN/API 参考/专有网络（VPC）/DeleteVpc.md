@@ -11,10 +11,8 @@
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
-|删除
-
-名称|类型|是否必须|描述|
-|:-----|:-|:---|:-|
+|名称|类型|是否必须|描述|
+|:-|:-|:---|:-|
 |Action|String|是| 要执行的操作。 取值：
 
  DeleteVpc
@@ -28,7 +26,7 @@
 
 |名称|类型|描述|
 |:-|:-|:-|
-|RequestId|String|请求ID。|
+||String|请求ID。|
 
 ## 示例 {#section_ix5_h1g_cz .section}
 
