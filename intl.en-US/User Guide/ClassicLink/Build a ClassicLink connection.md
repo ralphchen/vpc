@@ -2,9 +2,9 @@
 
 You can set up a ClassicLink connection to let the ECS instance of the classic network access the resources deployed in a VPC network.
 
-Make sure that you are aware of the limitations of ClassicLink. For more information, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
+Make sure that you are aware of the limitations of ClassicLink. For more information, see [ClassicLink overview](reseller.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
 
-1.   Log on to the [VPC console](https://vpcnext.console.aliyun.com). 
+1.   Log on to the [VPC console](https://partners-intl.console.aliyun.com/#/vpc). 
 2.   Select the region of the target VPC, and click the ID of the target VPC. 
 3.   On the VPC Details page, click **Enable ClassicLink**. In the displayed dialog box, click **OK**. 
 4.   Go to the ECS console. 
@@ -13,7 +13,7 @@ Make sure that you are aware of the limitations of ClassicLink. For more informa
 7.  Click **More** \> **Network and Security Group** \> **Connect to VPC**. 
 8.   In the displayed dialog box, select the target VPC and click**OK**. Then click the security group configuration link. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/1535435362818_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2441/1538213722818_en-US.png)
 
 9.   Click**Add ClassicLink Rules** and configure the security rule according to the following information. Then, click **OK**. 
 
