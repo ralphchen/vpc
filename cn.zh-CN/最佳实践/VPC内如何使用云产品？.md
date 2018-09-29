@@ -26,19 +26,17 @@
 
     您可以查看以下相关云产品的帮助文档：
 
-    -   [日志服务的VPC访问入口说明](https://help.aliyun.com/document_detail/29008.html)
+    -   [日志服务的VPC访问入口说明](https://www.alibabacloud.com/help/doc-detail/29008.htm)
 
-    -   [对象存储的VPC访问入口说明](https://help.aliyun.com/document_detail/31837.html)
+    -   [对象存储的VPC访问入口说明](https://www.alibabacloud.com/help/doc-detail/31837.htm)
 
 
 ## 如何切换网络类型？ {#section_h4s_lp5_sdb .section}
 
 -   对于部分实例型云产品，比如云数据库RDS版，可以在控制台进行网络类型的切换，从经典网络切换到VPC网络。
 
--   单ECS实例可以直接从经典网络迁移至VPC。
-
--   对于负载均衡产品，目前不支持将经典网络实例切换为专有网络实例，您可以重新购买一个VPC类型的实例并挂载VPC ECS。
+-   对于负载均衡产品，目前不支持将经典网络实例切换为专有网络实例，您可以重新购买一个VPC类型的实例并添加专有网络类型的ECS实例。
 
 
-参见[经典网络迁移到VPC](cn.zh-CN/最佳实践/经典网络迁移到VPC.md#)了解更多信息。
+参见[迁移方案概述](intl.zh-CN/最佳实践/经典网络迁移到VPC/迁移方案概述.md#)了解更多信息。
 
