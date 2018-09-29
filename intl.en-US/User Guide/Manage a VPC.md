@@ -6,18 +6,18 @@ Virtual Private Cloud \(VPC\) is a private network dedicated to you in Alibaba C
 
 VRouter and VSwitch are two basic components of VPC:
 
--   VRouter connects VSwitches in a VPC and serves as the gateway connecting the VPC with other networks. A VRouter is automatically created after a VPC is created. Each VRouter associates with a route table. For more information, see [Routing](intl.en-US/User Guide/Routing.md#).
+-   VRouter connects VSwitches in a VPC and serves as the gateway connecting the VPC with other networks. A VRouter is automatically created after a VPC is created. Each VRouter associates with a route table. For more information, see [Routing](reseller.en-US/User Guide/Routing.md#).
 
--   VSwitch is a basic network module in a VPC, used to connect different cloud product instances. After creating a VPC, you can further segment your virtual private network to one or more subnets by creating VSwitches. You can deploy different applications to different VSwitches that are located in different zones to improve the service availability. VSwitches in different zones of a VPC can communicate with each other through the intranet by default. For more information, see [Manage VSwitches](intl.en-US/User Guide/Manage VSwitches.md#).
+-   VSwitch is a basic network module in a VPC, used to connect different cloud product instances. After creating a VPC, you can further segment your virtual private network to one or more subnets by creating VSwitches. You can deploy different applications to different VSwitches that are located in different zones to improve the service availability. VSwitches in different zones of a VPC can communicate with each other through the intranet by default. For more information, see [Manage VSwitches](reseller.en-US/User Guide/Manage VSwitches.md#).
 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/1535435135809_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/1538213374809_en-US.png)
 
 ## IP address range \(CIDR block\) {#section_uy3_vqw_rdb .section}
 
-When creating a VPC, you must specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing \(CIDR\) block. Use the following standard private CIDR blocks or their subsets as the IP address range. The IP address range is related to your network design. For more information, see [Plan and design VPC](../../../../intl.en-US/Best practices/Plan and design VPC.md#).
+When creating a VPC, you must specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing \(CIDR\) block. Use the following standard private CIDR blocks or their subsets as the IP address range. The IP address range is related to your network design. For more information, see [Plan and design VPC](../../../../reseller.en-US/Best practices/Plan and design VPC.md#).
 
-If you want to use a subset of a standard CIDR block as the IP address range, you must use the [CreateVpc](../../../../intl.en-US/API reference/Virtual Private Cloud (VPC)/CreateVpc.md#) API to create a VPC.
+If you want to use a subset of a standard CIDR block as the IP address range, you must use the [CreateVpc](../../../../reseller.en-US/API reference/Virtual Private Cloud (VPC)/CreateVpc.md#) API to create a VPC.
 
 |CIDR block|Number of available private IPs|
 |:---------|:------------------------------|
@@ -29,7 +29,7 @@ If you want to use a subset of a standard CIDR block as the IP address range, yo
 
 To deploy cloud resources in a VPC, you must create at least a VSwitch. To create a VPC and a VSwitch, complete these steps:
 
-1.  Log on to the [VPC console](https://vpcnext.console.aliyun.com).
+1.  Log on to the [VPC console](https://partners-intl.console.aliyun.com/#/vpc).
 2.  Select the region of the VPC.
 
     The VPC and the cloud resources to deploy must locate in the same region.
@@ -87,7 +87,7 @@ To delete a VPC, complete these steps:
 
 ## Enable ClassicLink {#section_jdv_syw_rdb .section}
 
-With ClassicLink, ECS instances in the classic network can communicate with the cloud resource in the connected VPC. For more information, see [ClassicLink overview](intl.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
+With ClassicLink, ECS instances in the classic network can communicate with the cloud resource in the connected VPC. For more information, see [ClassicLink overview](reseller.en-US/User Guide/ClassicLink/ClassicLink overview.md#).
 
 To enable the ClassicLink function, complete these steps:
 
@@ -95,17 +95,17 @@ To enable the ClassicLink function, complete these steps:
 2.  Click the ID of the target VPC.
 3.  On theVPC Detailspage, click**Enable the ClassicLink**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15354351359786_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15382133749786_en-US.png)
 
 4.  Click **OK**.
 5.  Create a ClassicLink connection.
 
-    For more information, see [Build a ClassicLink connection](intl.en-US/User Guide/ClassicLink/Build a ClassicLink connection.md#).
+    For more information, see [Build a ClassicLink connection](reseller.en-US/User Guide/ClassicLink/Build a ClassicLink connection.md#).
 
 
 ## Attach to a CEN instance {#section_l3q_byw_rdb .section}
 
-You can attach a VPC to a CEN instance, so that the VPC can communicate with other VPCs in the CEN instance or local data centers. For more information, see [What is Cloud Enterprise Network](../../../../intl.en-US/Product Introduction/What is Cloud Enterprise Network.md#).
+You can attach a VPC to a CEN instance, so that the VPC can communicate with other VPCs in the CEN instance or local data centers. For more information, see [What is Cloud Enterprise Network](../../../../reseller.en-US/Product Introduction/What is Cloud Enterprise Network.md#).
 
 To quickly attach a VPC to a CEN instance in the same account, complete these steps:
 
@@ -113,7 +113,7 @@ To quickly attach a VPC to a CEN instance in the same account, complete these st
 2.  Click the ID of the target VPC.
 3.  On the VPC Details page, click **Attach to CEN**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15354351369784_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15382133749784_en-US.png)
 
 4.  Select a CEN instance and click **OK**.
 
@@ -127,17 +127,17 @@ To authorize a CEN instance in a different account to attach your VPC, complete 
 2.  Click the ID of the target VPC to attach.
 3.  On the VPC Details page, click **CEN Cross Account Authorization**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15354351369785_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2435/15382133749785_en-US.png)
 
 4.  In the Attach to CEN dialog box, enter the ID of the account that the CEN instance belongs to and the ID of the CEN Instance, and then click **OK**.
 
 ## Related APIs {#section_es2_lbx_rdb .section}
 
-[CreateVpc](../../../../intl.en-US/API reference/Virtual Private Cloud (VPC)/CreateVpc.md#)
+[CreateVpc](../../../../reseller.en-US/API reference/Virtual Private Cloud (VPC)/CreateVpc.md#)
 
-[DeleteVpc](../../../../intl.en-US/API reference/Virtual Private Cloud (VPC)/DeleteVpc.md#)
+[DeleteVpc](../../../../reseller.en-US/API reference/Virtual Private Cloud (VPC)/DeleteVpc.md#)
 
-[DescribeVpcs](../../../../intl.en-US/API reference/Virtual Private Cloud (VPC)/DescribeVpcs.md#)
+[DescribeVpcs](../../../../reseller.en-US/API reference/Virtual Private Cloud (VPC)/DescribeVpcs.md#)
 
-[ModifyVpcAttribute](../../../../intl.en-US/API reference/Virtual Private Cloud (VPC)/ModifyVpcAttribute.md#)
+[ModifyVpcAttribute](../../../../reseller.en-US/API reference/Virtual Private Cloud (VPC)/ModifyVpcAttribute.md#)
 
