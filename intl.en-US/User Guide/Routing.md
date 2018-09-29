@@ -2,7 +2,7 @@
 
 Alibaba Cloud automatically creates a default route table and adds system route entries to it after you create a VPC. You cannot create system route entries, nor delete system route entries, but you can create custom route entries to override system route entries, routing the traffic from specific IP address to the specified destination.
 
-You can add custom route entries to both system route tables and custom route tables. For more information about route tables, see [Route table](intl.en-US/User Guide/Route table.md#).
+You can add custom route entries to both system route tables and custom route tables. For more information about route tables, see [Route table](reseller.en-US/User Guide/Route table.md#).
 
 Each entry in the route table is a route entry. A route entry defines the next hop of the network traffic destined for a specific IP address. Route entries include system route entries and custom route entries.
 
@@ -69,7 +69,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:------------|
     |0.0.0.0/0|ECS instance|ECS01|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500810_en-US.png)
 
 -   VPC interconnection \(Express Connect\)
 
@@ -87,7 +87,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|Router interface \(To VPC\)|VPC 1|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219811_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500811_en-US.png)
 
 
 -   VPC interconnection \(VPN Gateway\)
@@ -131,7 +131,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|—|Local gateway|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15367372196425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15382135006425_en-US.png)
 
 -   Local connection \(VPN Gateway\)
 
@@ -141,14 +141,14 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:-------|
     |192.168.0.0/16|VPN metric reference|VPN Gateway|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1536737219814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500814_en-US.png)
 
 
 ## Add custom route entry {#section_k5r_n5y_rdb .section}
 
 To add a custom route entry, complete these steps:
 
-1.  Log on to the [VPC console](https://vpcnext.console.aliyun.com).
+1.  Log on to the [VPC console](https://partners-intl.console.aliyun.com/#/vpc).
 2.  Select the region of the VPC.
 3.  In the left-side navigation pane, click **Route Tables**.
 4.  Click the ID of the target route table, and then click the **Route Entry List** tab.
@@ -165,8 +165,6 @@ Applicable to the scenario where traffic destined for the specified network is r
     -   **VPN Gateway**: Route the traffic destined for the specified IP address range to the selected VPN Gateway.
 
     -   **Secondary ENI**：Route the traffic destined for the specified IP address range to the selected secondary ENI.
-
-    -   Applicable to the scenario where a VPN Gateway is used to connect two VPCs, or connect a VPC to a local IDC.
 
     -   **Router Interface \(To VPC\)**: Route the traffic destined for the specified IP address range to the selected VPC.
 
