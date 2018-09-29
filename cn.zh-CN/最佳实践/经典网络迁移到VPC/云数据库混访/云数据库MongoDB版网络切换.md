@@ -10,14 +10,14 @@
 
 -   实例类型必须是MongoDB副本集。
 
--   确认在当前数据库实例可用区下是否有可用的VPC和交换机。详情参见[创建专有网络和交换机](../cn.zh-CN/用户指南/管理专有网络.md#section_ufw_rhv_rdb)。
+-   确认在当前数据库实例可用区下是否有可用的VPC和交换机。详情参见[创建专有网络和交换机](../../../../intl.zh-CN/用户指南/管理专有网络.md#section_ufw_rhv_rdb)。
 
 
 ## 通过控制台切换网络类型 {#section_p5v_fw5_sdb .section}
 
 1.  登录MongoDB管理控制台。
-2.  找到目标实例，然后单击**更多** \> **变更网络类型**。
-3.  在数据库连接页面，单击**切换为专有网络**。
+2.  找到目标实例，单击实例ID或单击目标实例**操作**列的**管理**。
+3.  在左侧导航栏，单击数据库连接页签，然后单击**切换为专有网络**。
 4.  在弹出的对话框中，执行以下操作：
     1.  选择切换的目标专有网络和交换机。
     2.  选择保留经典网络地址并选择保留时长。
@@ -27,7 +27,7 @@
     3.  单击**确定**。
 5.  在数据库连接页面，单击**刷新**查看专有网络和经典网的访问地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2463/844_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2463/1538214517844_zh-CN.png)
 
 
 ## 通过API切换网络类型 {#section_gyr_xw5_sdb .section}
@@ -98,7 +98,7 @@
     |ReplicaSetRole|String|复制集角色：Primary | Secondary|
     |ConnectionDomain|String|实例连接域名。|
     |ConnectionPort|String|实例连接端口。|
-    |ExpiredTime|String|经典网络地址剩余时长，以秒为单位。。|
+    |ExpiredTime|String|经典网络地址剩余时长，以秒为单位。|
     |NetworkType|String|实例的网络类型：    -   VPC：专有网络
     -   Classic：经典网络
 |
