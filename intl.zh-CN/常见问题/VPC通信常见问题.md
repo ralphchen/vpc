@@ -6,7 +6,7 @@
 
 ## 2. 不同VPC之间能否内网互通？ {#section_qpc_2l5_vdb .section}
 
-不同VPC之间逻辑上完全隔离，您可以使用高速通道、VPN网关、云企业网实现VPC内网互通。详情参见[VPC私网接入](../../../../intl.zh-CN/最佳实践/VPC私网接入.md#)。
+不同VPC之间逻辑上完全隔离，您可以使用高速通道、VPN网关、云企业网实现VPC内网互通。详情参见[VPC私网接入](../../../../intl.zh-CN/最佳实践/如何选择私网类产品？.md#)。
 
 ## 3. VPC是否支持专线接入？ {#section_rpc_2l5_vdb .section}
 

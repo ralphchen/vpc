@@ -1,31 +1,45 @@
-# VPC FAQs {#concept_lbv_4f4_tdb .concept}
+# VPC FAQs {#concept_bxf_qf4_tdb .concept}
 
-## 1. What is the difference between the VPC and the classic network? {#section_d4z_hg4_tdb .section}
+## 1. Can different VSwitches in a VPC communicate with one another? {#section_ppc_2l5_vdb .section}
 
--   The cloud products created in the classic network are uniformly deployed in the public network infrastructure of Alibaba Cloud.  The classic network is managed by Alibaba Cloud, which is applicable for the users that have high demand on the usability.
--   VPC is an isolated private network that users create in Alibaba Cloud. Users have full control over the VPC.  Compared to the classic network, VPC is more applicable to the users with the network management capability who want to control their private networks.
+As long as the security group rules permit, ECS instances in the same VPC can communicate with one another, no matter whether they are the same or not.
 
-## 2. How many network interface cards does an ECS instance have? {#section_fht_lg4_tdb .section}
+## 2. Can different VPCs communicate with one another through the Intranet? {#section_qpc_2l5_vdb .section}
 
-The ECS instance created in the classic network has two NICs, one is the public NIC and the other one is the private NIC;  while the VPC ECS instance only has one private NIC.
+Different VPCs are logically isolated from one another. You can use Express Connect, VPN Gateway and CEN instances to enable communication among the VPCs. For more information, see [How to choose a private connectivity product?](../../../../reseller.en-US/Best practices/How to choose a private connectivity product?.md#).
 
-## 3. How many VRouters does a VPC have? {#section_vl4_ng4_tdb .section}
+## 3. Does VPC support physical access? {#section_rpc_2l5_vdb .section}
 
-Each VPC has only one VRouter and each VRouter maintains one route table.
+VPC supports the access of local data centers through physical connection. For more information, see the document of Express Connect.
 
-## 4. How many custom route entries does a route table have? {#section_arm_pg4_tdb .section}
+## 4. Does VPC provide the VPN function? {#section_spc_2l5_vdb .section}
 
-By default, you can add up to 48 custom route entries to a route table.  If you want to add more, submit a ticket.
+VPC provides the VPN function. For more information, see the document of VPN Gateway.
 
-## 5. How many VSwitches can a VPC have? {#section_gmy_qg4_tdb .section}
+## 5. Can VPC access Internet services? {#section_tpc_2l5_vdb .section}
 
-A VPC can contain 24 VSwitches at most.
+You can enable a VPC to access Internet services through the following methods:
 
-## 6. How many cloud product instances can a VPC contain? {#section_c4h_sg4_tdb .section}
+-   Allocate a public IP
+-   Bind an EIP
+-   Configure a NAT Gateway
 
-A VPC can contain 15,000 cloud product instances at most.
+For more information, see [How to choose an Internet-facing product?](../../../../reseller.en-US/Best practices/How to choose an Internet-facing product?.md#).
 
-## 7. How many cloud product instances can a VSwitch contain? {#section_i3s_5g4_tdb .section}
+## 6. Can cloud services in a VPC be accessed from the Internet? {#section_vpc_2l5_vdb .section}
 
-The number of the cloud product instances in a VSwitch depends on the current number of cloud product instances in the VPC,  which is 15,000 minus the current amount of the cloud product instances in the VPC.
+You can access cloud services in a VPC from the Internet through the following methods:
+
+-   Allocate a public IP
+-   Bind an EIP
+-   Port mapping 
+-   Configure an Internet SLB instance
+
+For more information, see [How to choose an Internet-facing product?](../../../../reseller.en-US/Best practices/How to choose an Internet-facing product?.md#).
+
+## 7. Can a VPC directly communicate with the classic network? {#section_xpc_2l5_vdb .section}
+
+VPC can't directly communicate with the classic network. You can configure a public IP for the ECS instance in the VPC through the following methods to enable the ECS instance to communicate with cloud product instances in the classic network through the Internet.
+
+For more information, see [How to choose an Internet-facing product?](../../../../reseller.en-US/Best practices/How to choose an Internet-facing product?.md#).
 
