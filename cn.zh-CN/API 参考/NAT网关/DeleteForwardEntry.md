@@ -6,10 +6,8 @@
 
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
-|删除
-
-名称|类型|是否必须|描述|
-|:-----|:-|:---|:-|
+|名称|类型|是否必须|描述|
+|:-|:-|:---|:-|
 |Action|String|是| 要执行的操作。 取值：
 
  DeleteForwardEntry
