@@ -23,48 +23,14 @@
  |
 |InternetChargeType|String|否| EIP的计费方式。取值：
 
--   PayByBandwidth（默认值）：按带宽计费
-
 -   PayByTraffic：按流量计费。
 
 
  |
 |InstanceChargeType|String|否| EIP的付费方式。取值：
 
- -   PrePaid：预付费
+ -   PostPaid（默认值）：后付费。
 
--   PostPaid（默认值）：后付费。
-
-
- |
-|PricingCycle|String|否| 预付费的计费周期，取值：
-
- -   Month（默认值）：按月付费
-
--   Year：按年付费。
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
-
- |
-|Period|String|否| 购买时长。取值：
-
- -   当选择按月付费时，取值范围为 \[1, 9\]
-
--   当选择按年付费时，取值范围为 \[1, 3\]
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
-
- |
-|AutoPay|String|否| 是否自动付费，取值：
-
- -   false：不开启自动付费，生成订单后需要到[订单中心](https://expense.console.aliyun.com/?#/order/list/)完成支付。
-
--   true：开启自动付费，自动支付订单。
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
 
  |
 |ClientToken|String|否| 客户端token，用于保证请求的幂等性。
@@ -80,7 +46,6 @@
 |RequestId|String|请求ID。|
 |EipAddress|String|分配的EIP。|
 |AllocationId|String|EIP的ID。|
-|OrderId|String|订单号，选择预付费时返回该参数。|
 
 ## 示例 {#section_ix5_h1g_cz .section}
 
