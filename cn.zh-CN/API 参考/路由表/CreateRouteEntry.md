@@ -68,11 +68,13 @@
 
  -   Instance：ECS实例（默认值）
 
-HaVip：高可用虚拟IP
-
-RouterInterface：路由器接口
-
 VpnGateway：VPN网关
+
+-   HaVip：高可用虚拟IP
+
+-   RouterInterface：路由器接口
+
+-   NetworkInterface ：弹性网卡
 
 
  **说明：** 创建普通（非ECMP路由）路由条目时必须指定该参数。
