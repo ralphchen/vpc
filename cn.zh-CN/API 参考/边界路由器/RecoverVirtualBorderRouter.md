@@ -8,8 +8,6 @@
 
 -   VBR所属的物理专线必须处于Enabled状态。
 
--   VBR被终止7天后，其VLAN ID可以被其他VBR占用。如果VLAN ID被占用，则恢复操作将失败。
-
 
 ## 请求参数 {#section_qjj_tpp_vdb .section}
 
