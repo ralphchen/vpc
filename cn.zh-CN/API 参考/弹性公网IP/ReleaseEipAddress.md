@@ -2,8 +2,6 @@
 
 释放指定的EIP。
 
-**说明：** 只有处于Available状态的EIP可以被释放。
-
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
 |名称|类型|是否必须|描述|
