@@ -58,8 +58,10 @@
 |TotalCount|String|列表条条目数。|
 |PageNumber|Integer|当前页码。|
 |PageSize|String|每页包含多少条目。|
-|PhysicalConnectionSet|JSON String|物理专线的详细信息。|
-|PhysicalConnectionSet元素|
+|PhysicalConnectionSet|List|物理专线的详细信息。|
+
+|名称|类型|描述|
+|:-|:-|:-|
 |PhysicalConnectionId|String|物理专线的ID。|
 |AccessPointId|String|物理专线接入点的ID。|
 |Status|String|物理专线状态：-   Initial：申请中
