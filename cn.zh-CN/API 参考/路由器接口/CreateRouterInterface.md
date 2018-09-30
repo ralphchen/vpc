@@ -16,8 +16,6 @@
 
 -   在只能在处于Active状态VBR上创建路由器接口。
 
-**说明：** 使用API创建的路由器接口只支持按天计费，不支持包年包月的计费方式
-
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
 |名称|类型|是否必须|描述|
@@ -131,40 +129,8 @@
  |
 |InstanceChargeType|String|否| 路由器接口的付费方式。取值：
 
- -   PrePaid：预付费
+ -   PostPaid（默认值）：后付费。
 
--   PostPaid（默认值）：后付费。
-
-
- |
-|PricingCycle|String|否| 预付费的计费周期，取值：
-
- -   Month（默认值）：按月付费
-
--   Year：按年付费。
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
-
- |
-|Period|String|否| 购买时长。取值：
-
- -   当选择按月付费时，取值范围为 \[1, 9\]
-
--   当选择按年付费时，取值范围为 \[1, 3\]
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
-
- |
-|AutoPay|String|否| 是否自动付费，取值：
-
- -   false：不开启自动续费，生成订单后需要到[订单中心](https://expense.console.aliyun.com/?#/order/list/)完成支付。
-
--   true：开启自动续费，自动支付订单。
-
-
- **说明：** InstanceChargeType参数的值为PrePaid时，该参数必选。
 
  |
 |ClientToken|String|否| 客户端token，用于保证请求的幂等性。
