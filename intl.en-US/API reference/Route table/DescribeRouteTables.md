@@ -35,7 +35,7 @@ Query the custom route entries created in a route table.
 
  |
 
-## Return Parameters {#section_fpn_ymk_qdb .section}
+## Response parameters {#section_fpn_ymk_qdb .section}
 
 |Name|Type|Description|
 |:---|:---|:----------|
