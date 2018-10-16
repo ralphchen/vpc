@@ -69,7 +69,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:------------|
     |0.0.0.0/0|ECS instance|ECS01|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539686808810_en-US.png)
 
 -   VPC interconnection \(Express Connect\)
 
@@ -87,7 +87,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|Router interface \(To VPC\)|VPC 1|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500811_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539686808811_en-US.png)
 
 
 -   VPC interconnection \(VPN Gateway\)
@@ -131,7 +131,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|—|Local gateway|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15382135006425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15396868096425_en-US.png)
 
 -   Local connection \(VPN Gateway\)
 
@@ -141,7 +141,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:-------|
     |192.168.0.0/16|VPN metric reference|VPN Gateway|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1538213500814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539686809814_en-US.png)
 
 
 ## Add custom route entry {#section_k5r_n5y_rdb .section}
