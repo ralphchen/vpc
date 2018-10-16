@@ -69,7 +69,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:------------|
     |0.0.0.0/0|ECS instance|ECS01|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539687880810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688838810_en-US.png)
 
 -   VPC interconnection \(Express Connect\)
 
@@ -87,7 +87,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|Router interface \(To VPC\)|VPC 1|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539687880811_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688838811_en-US.png)
 
 
 -   VPC interconnection \(VPN Gateway\)
@@ -105,8 +105,6 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |Destination CIDR block|Next hop type|Next hop|
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|VPN metric reference|VPN Gateway 2|
-
-        ![](images/814_en-US_source.png)
 
 -   Local IDC connection \(Express Connect\)
 
@@ -131,7 +129,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|—|Local gateway|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15396878806425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15396888386425_en-US.png)
 
 -   Local connection \(VPN Gateway\)
 
@@ -141,7 +139,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:-------|
     |192.168.0.0/16|VPN metric reference|VPN Gateway|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539687880814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688839814_en-US.png)
 
 
 ## Add custom route entry {#section_k5r_n5y_rdb .section}
