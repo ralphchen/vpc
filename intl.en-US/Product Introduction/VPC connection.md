@@ -76,7 +76,7 @@ The following table lists the products or functions that you can use to connect 
 |:------|:------|:------|
 |Express Connect| Express Connect allows you to connect a VPC to a local data center.
 
- For more information, see [物理专线接入](../intl.en-US/Tutorials/Connect a local data center to a VPC through a physical connection.md#). 
+ For more information, see [物理专线接入](../intl.en-US/Getting Started (New Console)/Connect a local data center to a VPC through a physical connection.md#). 
 
  | -   Based on the backbone network, low latency.
 
