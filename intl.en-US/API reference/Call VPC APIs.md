@@ -43,7 +43,7 @@ https://vpc.aliyuncs.com/?Action=DescribeVpcs
 
 For the security of your account, we recommend that you use a RAM user to call APIs. Before using a RAM user to call an API, you must grant the RAM user the corresponding permission to call the API by creating an authorization policy and attaching the policy to the RAM user.
 
-For more information, see [RAM authentication](intl.en-US/API reference/RAM authentication.md#).
+For more information, see [RAM authentication](reseller.en-US/API reference/RAM authentication.md#).
 
 ## API signature {#section_jtc_ymf_mdb .section}
 

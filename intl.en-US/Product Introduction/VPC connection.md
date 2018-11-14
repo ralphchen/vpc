@@ -2,18 +2,22 @@
 
 Alibaba Cloud provides a lot of connectivity options to you to connect a VPC to the Internet, other VPCs, or local data centers.
 
-## Connect to Internet {#section_jyt_lhj_w2b .section}
+## Connect to the Internet {#section_jyt_lhj_w2b .section}
 
 The following table lists the products or functions that you can use to connect a VPC to the Internet.
 
-|Product|Function|Benefit|
-|:------|:-------|:------|
-|ECS public IP| The public IP allocated by Alibaba Cloud when creating an ECS instance of the VPC network. With this public IP, the ECS instance can access the Internet \(SNAT\) and also can be accessed from the Internet \(DNAT\). However, you cannot unbind the public IP from the ECS instance.
+|Product|Feature|Benefit|
+|:------|:------|:------|
+|The public IP of an ECS instance of the VPC network| The public IP allocated by Alibaba Cloud when creating an ECS instance of the VPC network. With this public IP, the ECS instance can access the Internet \(SNAT\) and also can be accessed from the Internet \(DNAT\).
 
- | None.
+ | You can use Data Transfer Plan.
+
+ After changing a public IP to an EIP, you can also use [Internet Shared Bandwidth](https://www.aliyun.com/product/cbwp).
 
  |
 |Elastic IP Address \(EIP\)|With an EIP, the ECS instance can access the Internet \(SNAT\) and also can be accessed from the Internet \(DNAT\).| You can bind and unbind an EIP from an ECS instance at any time.
+
+ You can use [Internet Shared Bandwidth](https://www.aliyun.com/product/cbwp) and [Data Transfer Plan](https://www.aliyun.com/product/flowbag) to reduce Internet cost.
 
  |
 |NAT Gateway|NAT Gateway is an enterprise-class Internet gateway, supporting multiple ECS instances accessing the Internet with one EIP \(SNAT\) and being accessed from the Internet \(DNAT\).**Note:** Compared to Server Load Balancer, NAT Gateway itself does not provide the traffic balancing function.
@@ -29,48 +33,50 @@ The following table lists the products or functions that you can use to connect 
 
  Server Load Balancer is a traffic distribution control service that distributes the incoming traffic among multiple ECS instances according to the configured forwarding rules. It expands application service capabilities and enhances application availability.
 
+ After binding with an EIP, you can use [Internet Shared Bandwidth](https://www.aliyun.com/product/cbwp) and [Data Transfer Plan](https://www.aliyun.com/product/flowbag) to reduce the Internet cost.
+
  |
 
 ## Connect to a VPC {#section_lq3_mhj_w2b .section}
 
 The following table lists the products or functions that you can use to connect a VPC to another VPC.
 
-|Product|Function|Benefit|
-|:------|:-------|:------|
-|VPN Gateway| VPN Gateway allows you to create an IPsec-VPN connection to build an encrypted communication between two VPC networks.
+|Product|Feature|Benefit|
+|:------|:------|:------|
+|VPN Gateway| VPN Gateway allows you to create an IPsec-VPN connection to build an encrypted communication between two VPCs.
 
- For more information, see [Configure a VPC-to-VPC connection](../intl.en-US/IPsec-VPN Quick Start/Configure a VPC-to-VPC connection.md#).
+ For more information, see [配置VPC到VPC连接](../intl.en-US/IPsec-VPN Quick Start/Configure a VPC-to-VPC connection.md#). 
 
  | -   Low cost, secure and simple configuration. However, the quality of the network depends on the Internet.
 
--   IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, Cisco, ASN, Juniper, SonicWall, Nokia, IBM, and Ixia.
+-   IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, SANGFOR, Cisco ASA, Juniper, SonicWall, Nokia, IBM, and Ixia.
 
 
  |
-|Cloud Enterprise Network \(CEN\)| CEN allows you to connect VPCs in different regions and different accounts to build an interconnected network.
+|CEN| CEN allows you to connect VPCs in different regions and different accounts to build an interconnected network.
 
- For more information, see [Tutorial overview](../intl.en-US/Quick Start/Tutorial overview.md#).
+ For more information, see [教程概览](../intl.en-US/Quick Start/Tutorial overview.md#). 
 
  | -   Simple configuration, and automatic route learning and distribution.
 
 -   Low latency and fast speed.
 
--   The networks \(VPC/VBR\) attached to a CEN instance are all connected with each other.
+-   The networks \(VPCs/VBRs\) attached to a CEN instance are connected with each other.
 
 -   The network connection in the same region is free of charge.
 
 
  |
 
-## Connect to a local IDC {#section_s1d_4hj_w2b .section}
+## Connect a VPC to a local IDC {#section_s1d_4hj_w2b .section}
 
 The following table lists the products or functions that you can use to connect a VPC to a local IDC.
 
-|Product|Function|Benefit|
-|:------|:-------|:------|
-|Express Connect| Express Connect allows you to connect to a local IDC with a dedicated physical connection.
+|Product|Feature|Benefit|
+|:------|:------|:------|
+|Express Connect| Express Connect allows you to connect a VPC to a local data center.
 
- For more information, see [Connect a local data center to a VPC through a physical connection](../intl.en-US/Quick Start/Connect a local data center to a VPC through a physical connection.md#).
+ For more information, see [物理专线接入](../intl.en-US/Tutorials/Connect a local data center to a VPC through a physical connection.md#). 
 
  | -   Based on the backbone network, low latency.
 
@@ -80,7 +86,7 @@ The following table lists the products or functions that you can use to connect 
  |
 |VPN Gateway| -   VPN Gateway allows you to create an IPsec-VPN connection to connect a VPC to a local IDC.
 
--   Connect multiple local sites
+-   Connect multiple local IDCs
 
 The VPN-Hub function of VPN Gateway allows you to connect multiple local sites to the VPC. The connected sites can communicate with the VPC, but also can communicate with one another.
 
@@ -91,26 +97,26 @@ VPN Gateway allows you to create an SSL-VPN connection to let clients access the
 
  | -   Low cost, secure and simple configuration. However, the quality of the network depends on the Internet.
 
--   IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, Cisco, ASN, Juniper, SonicWall, Nokia, IBM, and Ixia.
+-   IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, SANGFOR, Cisco ASA, Juniper, SonicWall, Nokia, IBM, and Ixia.
 
 -   SSL-VPN connection supports connecting a VPC from a remote computer using the Linux, Windows, and Mac operating systems.
 
 
  |
-|Cloud Enterprise Network \(CEN\)| -   Connect to a local data center
+|CEN| -   Connect to a local data center
 
-CEN allows you to attach the VBR associated with alocal data center to a CEN instance to build an interconnected network.
+CEN allows you to attach the VBR associated with a local data center to a CEN instance to build an interconnected network.
 
--   Connect to multiple VPC and local networks
+-   Connect multiple VPCs with local IDCs
 
-CEN allows you to attach multiple networks \(VPC/VBR\) to a CEN instance. All the attached networks are all connected with each other.
+CEN allows you to attach multiple networks \(VPC/VBR\) to a CEN instance. All the attached networks are connected with one another.
 
 
  | -   Simple configuration, and automatic route learning and distribution.
 
 -   Low latency and fast speed.
 
--   The networks \(VPCs/VBRs\) attached to a CEN instance are connected with each other.
+-   The networks \(VPCs/VBRs\) attached to a CEN instance are connected with one another.
 
 -   The network connection in the same region is free of charge.
 
@@ -123,7 +129,7 @@ CEN allows you to attach multiple networks \(VPC/VBR\) to a CEN instance. All th
 
  | -   Highly automated configuration, out-of-box experience, and automatically and quickly adapts to network topology changes.
 
--   Access is provided from a nearby cities through the Internet. Additionally, multiple local branches can access Alibaba Cloud using the Smart Access Gateway devices with master-slave links.
+-   Access is provided from a nearby point within the city over the Internet. Additionally, multiple local branches can access Alibaba Cloud using the Smart Access Gateway devices with master-slave links.
 
 -   The local branches and the Alibaba Cloud are connected through an encrypted private network and encryption authentication is implemented during the Internet transmission.
 
