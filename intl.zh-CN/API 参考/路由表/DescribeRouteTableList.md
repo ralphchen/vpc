@@ -11,6 +11,11 @@
  DescribeRouteTableList
 
  |
+|RegionId|String|是| 路由表所属的VPC的地域ID。
+
+ 您可以通过调用 DescribeRegions接口获取地域ID。
+
+ |
 |RouterType|String|否| 路由表所属的路由器类型。取值：
 
  -   VRouter（默认值）：VPC路由器
@@ -19,12 +24,14 @@
 
 
  |
+|RouterId|String|否|路由表所属路由器的ID。|
 |VpcId|String|否| 路由表所属的VPC路由器的ID。指定该参数后，参数RouterType的值自动设置为VRouter。
 
  |
 |RouteTableId|String|否| 路由表的ID。
 
  |
+|RouteTableName|String|否|路由表的名称。|
 |PageNumber|Integer|否| 列表的页码，默认值为1。
 
  |
@@ -37,7 +44,7 @@
 |名称|类型|描述|
 |:-|:-|:-|
 |RequestId|String|请求ID。|
-|TotalCount|String|列表条条目数。|
+|TotalCount|String|列表条目数。|
 |PageNumber|Integer|当前页码。|
 |PageSize|String|每页包含多少条目。|
 |RouteTableList|List|路由表的详细信息。|
