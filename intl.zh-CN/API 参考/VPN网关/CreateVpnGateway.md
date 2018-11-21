@@ -21,9 +21,9 @@
  |
 |InstanceChargeType|String|否| VPN网关的计费类型，取值：
 
--   Prepay：预付费，包月购买。
+-   PREPAY：预付费，包月购买。
 
--   Postpay：后付费，按流量计费。
+-   POSTPAY：后付费，按流量计费。
 
 
  |
@@ -66,7 +66,7 @@
 **请求示例**
 
 ``` {#createVPCpub}
-https://vpc.aliyuncs.com/?Action=DescribeNatGateways
+https://vpc.aliyuncs.com/?Action=CreateVpnGateway
 &RegionId=cn-beijing
 &&VpcId=vpc-bp1ub1yt9cvakoelj1y9c
 &Bandwidth=5
