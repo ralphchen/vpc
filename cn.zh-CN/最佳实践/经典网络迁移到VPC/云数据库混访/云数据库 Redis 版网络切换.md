@@ -26,7 +26,7 @@
     3.  单击**确定**。
 6.  在实例信息页面，单击**刷新**查看专有网络和经典网的访问地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2462/1538214491843_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2462/1543494040843_zh-CN.png)
 
 
 ## 通过控制台修改经典网络内网地址使用期限 {#section_pnk_cx5_sdb .section}
