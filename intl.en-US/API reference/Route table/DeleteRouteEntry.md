@@ -43,9 +43,9 @@ RouterInterface: Router interface
 
  |
 |NextHopId|String|No|The ID of the next-hop instance.|
-|Enabled|Integer|No|Whether to enable the next hop:-   0：unavailable
+|Enabled|Integer|No|Whether to enable the next hop:-   0: unavailable
 
--   1：available
+-   1: available
 
 
 |
