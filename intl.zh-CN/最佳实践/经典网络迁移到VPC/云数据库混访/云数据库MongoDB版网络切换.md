@@ -27,7 +27,7 @@
     3.  单击**确定**。
 5.  在数据库连接页面，单击**刷新**查看专有网络和经典网的访问地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2463/1538981153844_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2463/1543494057844_zh-CN.png)
 
 
 ## 通过API切换网络类型 {#section_gyr_xw5_sdb .section}
