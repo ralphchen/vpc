@@ -104,7 +104,7 @@ Query the created physical connections in a region.
 
 -   CO: Others in China
 
--   Equinix：Equinix
+-   Equinix: Equinix
 
 -   Other: Others outside China
 
