@@ -48,7 +48,7 @@ Take the IP address range 192.168.1.0/24 as an example, IP addresses 192.168.1.0
     |**Number of Available Private IPs**|Display the number of available private IPs of the VSwitch.|
     |**Description**| Enter a description of the VSwitch.
 
- The name can contain 2 to 256 characters, but cannot begin with`http://` 和 `https://`.
+ The name can contain 2 to 256 characters, but cannot begin with`http://` and `https://`.
 
  |
 
@@ -62,7 +62,7 @@ To create cloud resources in a VSwitch, complete these steps:
 3.  In the left-side navigation pane, click **VSwitches**.
 4.  Locate the target VSwitch, click **Purchase** and select the cloud resources to create.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15382134129789_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15434933799789_en-US.png)
 
 5.  Complete the configuration.
 
@@ -82,7 +82,7 @@ To delete a VSwitch, complete these steps:
 3.  In the left-side navigation pane, click **VSwitches**.
 4.  Locate the target VSwitch, and click **Delete**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15382134129788_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2436/15434933809788_en-US.png)
 
 5.  In the displayed dialog, click **OK**.
 
