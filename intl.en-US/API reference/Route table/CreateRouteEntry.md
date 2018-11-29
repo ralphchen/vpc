@@ -118,7 +118,7 @@ RouterInterface: router interface
 
  |
 |NextHopId|String|No|The ID of the next-hop instance.|
-|Enabled|Default value: 1.|Optional|Whether to enable the next hop:-   0：unavailable
+|Enabled|String|Optional|Whether the next hop is available:-   0: unavailable
 
 -   1: available
 
@@ -147,7 +147,7 @@ https://vpc.aliyuncs.com/?Action=CreateRouteEntry
 
 **Response parameter**
 
--   XML格式
+-   XML format
 
     ```
     &amp;lt;? xml version="1.0" encoding="UTF-8"? >
