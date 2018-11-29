@@ -1,21 +1,21 @@
 # DescribeRouteTables {#reference_o4n_ymk_qdb .reference}
 
-Query the custom route entries created in a route table.
+Query route entries in a route table.
 
 ## Request parameters {#section_p4n_ymk_qdb .section}
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Action|String|Yes| The action to perform. Value:
+|Action|String|Yes| The action to perform. Valid value:
 
  DescribeRouteTables
 
  |
-|RouterType|String|No| The type of the router to which the route table belongs. Value:
+|RouterType|String|No| The type of the router to which the route table belongs. Valid value:
 
- -   VRouter: Virtual Private Cloud
+ -   VRouter: VRouter
 
--   VBR: Virtual border router
+-   VBR: VBR
 
 
  |
@@ -31,7 +31,7 @@ Query the custom route entries created in a route table.
 |PageNumber|Integer|No| The number of pages to return. The default value is 1.
 
  |
-|PageSize|Integer|No| The number of rows per page. The maximum value is 50 and the default value is  10.
+|PageSize|Integer|No| The number of rows per page. The maximum value is 50 and the default value is 10.
 
  |
 
@@ -41,70 +41,70 @@ Query the custom route entries created in a route table.
 |:---|:---|:----------|
 |RequestId|String|The ID of the request.|
 |TotalCount|String|The number of queried entries.|
-|PageNumber|Integer|Current page.|
+|PageNumber|Integer|The current page number.|
 |PageSize|String|The number of entries on the current page.|
-|RouteTables|List|For more information, see RouteTableSetType.|
+|RouteTables|List|A list of route tables.|
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|RouterType|String|The type of the router to which the route table belongs.-   VRouter: Virtual Private Cloud
+|RouterType|String|The type of the router to which the route table belongs. Valid value:-   VRouter: VRouter
 
--   VBR: Virtual border router
+-   VBR: VBR
 
 
 |
 |RouterId|String|The ID of the VRouter or VBR to which the route table belongs.|
-|VRouterId|String|The ID of the VPC router.|
+|VRouterId|String|The ID of the VRouter.|
 |RouteTableId|String|The ID of the route table.|
-|RouteTableType|String|The type of route table.|
-|CreationTime|String|The creation of the router table.|
-|RouteEntrys|JSON String|More information on router number.|
+|RouteTableType|String|The type of the route table.|
+|CreationTime|String|The time when the route table was created.|
+|RouteEntrys|List|A list of route entries.|
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Type|String|Type of Route entry, value:-   System: System router
+|Type|String|The type of the route entry. Valid values:-   System: System route entry
 
--   Custom: Custom router
+-   Custom: Custom route entry
 
--   BGP BGP Router
+-   BGP : BGP route entry
 
 
 |
-|RouteTableId|String|The ID of the router table to which the router numbers belongs.|
-|Destinationcidrblock|String|The target network segment of the route entry.|
+|RouteTableId|String|The ID of the router table to which the route entry belongs.|
+|DestinationCidrBlock|String|The destination CIDR block of the route entry.|
 |NextHopType|String|The type of the next hop.|
-|InstanceId|String|Instance ID of the next hop.|
-|Status|String|Status of the route entry, value:-   Pending: being configuring
+|InstanceId|String|The instance ID of the next hop.|
+|Status|String|The status of the route entry. Valid value:-   Pending: Configuring
 
--   Available: available
+-   Available: Available
 
--   Modifying：modifying
+-   Modifying: Modifying
 
 
 |
 |RouterId|String|The ID of the VRouter or VBR to which the route table belongs.|
-|NextHops|List|The next hop list of ECMP routes.|
+|NextHops|List|The list of next hops of ECMP route entries.|
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|NextHopType|String| Type of next hop. Value:
+|NextHopType|String| The type of the next hop. Valid value:
 
  -   Instance: ECS instance \(default\)
 
-HaVip: high available virtual IP
+HaVip: HaVip
 
-RouterInterface: router interface
+RouterInterface: Router interface
 
 
  |
-|NextHopId|String|The ID of the next hop instance|
-|Enabled|Integer|Enable next hop:-   0：unavailable
+|NextHopId|String|The ID of the next hop instance.|
+|Enabled|Integer|Whether the next hop is available:-   0: Unavailable
 
--   1：available
+-   1: Available
 
 
 |
-|Weight|Integer|The route weight of the next hop.|
+|Weight|Integer|The routing weight of the next hop.|
 
 ## Examples {#section_fqn_ymk_qdb .section}
 
@@ -116,22 +116,22 @@ https://vpc.aliyuncs.com/?Action=DescribeRouteTables
 &CommonParameters
 ```
 
-**Return example**
+**Response example**
 
 -   XML format
 
     ```
-    <? XML version = "1.0" encoding = "UTF-8 "? >
+    <? xml version="1.0" encoding="UTF-8"? >
     <DescribeRouteTablesResponse>
     	<PageNumber>1</PageNumber>
     	<TotalCount>1</TotalCount>
     	<PageSize>10</PageSize>
-    	<RequestId> </RequestId>
+    	<RequestId>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</RequestId>
     	<RouteTables>
     		<RouteTable>
     			<CreationTime>2017-08-22T10:40:25Z</CreationTime>
     			<RouteEntrys>
-    			<Routeentry>
+    				<RouteEntry>
     					<NextHops></NextHops>
     					<Status>Available</Status>
     					<Type>Custom</Type>
@@ -139,12 +139,12 @@ https://vpc.aliyuncs.com/?Action=DescribeRouteTables
     					<NextHopType>RouterInterface</NextHopType>
     					<RouteTableId>vtb-2zevpmy9th8cxmwtarqg4</RouteTableId>
     					<DestinationCidrBlock>10.10.0.0/24</DestinationCidrBlock>
-    					</Routeentry>
+    				</RouteEntry>
     				<RouteEntry>
     					<NextHops></NextHops>
     					<Status>Available</Status>
-    					<Type>System</Type>
-    					<Instanceid> </instanceid>
+    					<Type>Image</Type>
+    					<InstanceId></InstanceId>
     					<NextHopType>service</NextHopType>
     					<RouteTableId>vtb-2zevpmy9th8cxmwtarqg4</RouteTableId>
     					<DestinationCidrBlock>100.64.0.0/10</DestinationCidrBlock>
