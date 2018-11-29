@@ -49,19 +49,19 @@ Besides, to reduce the cost of Internet bandwidth and traffic, Alibaba Cloud pro
 
     If you have only one application and the business is not large, a single ECS instance can meet your requirements. You can deploy applications, databases, and files on this ECS instance. Then, bind an EIP to the ECS instance. Therefore, users can access the deployed application through the Internet.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1540872822826_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1543493725826_en-US.png)
 
 -   Provide external services with Layer-4
 
     When the traffic is large, one ECS cannot support all access traffic. You must configure multiple ECS instances. In this case, you can configure an Internet SLB instance with a Layer-4 listener and add these ECS instances as the backend servers.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1540872822827_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1543493726827_en-US.png)
 
 -   Provide external services with Layer-7 load balancing
 
     In addition to the basic traffic distribution, if you want to distribute different requests to different backend servers, you can add URL forwarding rules to a Layer-7 listener. In this case, you can configure an Internet SLB instance with a Layer-7 listener and add these ECS instances as the backend servers.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1540872822828_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1543493726828_en-US.png)
 
 
 ## Scenario 2: Internet access of an ECS instance without a public IP {#section_sdf_yq5_sdb .section}
@@ -70,12 +70,12 @@ Besides, to reduce the cost of Internet bandwidth and traffic, Alibaba Cloud pro
 
     When you have fewer ECS instances, you can bind an EIP to each ECS instance. The ECS instance then can access the Internet using the EIP. Unbind the EIP from the ECS instance whenever the Internet access is not needed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1540872822826_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1543493725826_en-US.png)
 
 -   Configure SNAT entries using NAT Gateway
 
     If you bind an EIP to each ECS instance respectively, the management cost is high when you have many ECS instances. Additionally, users can access the ECS instance from the Internet through the EIP. In this case, you can configure an SNAT entry for the ECS instances in a VSwitch to access the Internet, but do not configure any DNAT entries. Therefore, the ECS instances can access the Internet, but users cannot access these ECS instances from the Internet, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1540872822829_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2449/1543493726829_en-US.png)
 
 
