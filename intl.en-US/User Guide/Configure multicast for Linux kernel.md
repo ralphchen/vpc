@@ -113,7 +113,7 @@ To install the multicast agent tool, complete these steps:
 
 You can also use the provided script for multicast configuration. Click [Here](https://github.com/aliyun/multicast_proxy/tree/master/multicast_kernel/conf_auto_make_script) to obtain the script.
 
-**Note:** It is recommended that you use an automated script for multicast configuration. Read the readme before running the script.
+**Note:** We recommend that you use an automated script for multicast configuration. Read the readme before running the script.
 
 **Server configuration**
 
@@ -150,12 +150,12 @@ Options:
 
 You must configure the information of the multicast groups that the client is added to. A client server can belong to 10 different multicast groups at most.
 
-Use the multic\_admin command to configure the client, and run multic\_admin -help to view detailed description.
+Configure the client with the multic\_admin command, and execute multic\_admin-help to view detailed instructions.
 
 ```
 
 multic_admin -- This command can be used to configure multicast client.
-Usage: 
+Usage:
 multic_admin -A -i {ip} -p {port} -m {multi_ip}
 multic_admin -D -i {ip} -p {port} 
 multic_admin -C 
