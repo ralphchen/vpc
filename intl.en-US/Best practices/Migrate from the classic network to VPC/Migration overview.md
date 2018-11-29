@@ -32,7 +32,7 @@ You can use the following two methods to migrate your system to a VPC network. Y
 
 ## Hybrid access and hybrid addition {#section_qmn_mv5_sdb .section}
 
-The hybrid access and hybrid addition solution is a seamless migration solution. Firstly, you must create the required cloud resources \(such as ECS\) in the VPC network to be migrated to, and then use this method to smoothly migrate your system to the VPC. After all the resources have been migrated to VPC, release the cloud resources in the classic network to complete the whole migration process. For more information, see [Example of hybrid access and hybrid addition migration](reseller.en-US/Best practices/Migrate from the classic network to VPC/Example of hybrid access and hybrid addition migration.md#).
+The hybrid access and hybrid addition solution is a seamless migration solution. Firstly, you must create the required cloud resources \(such as ECS\) in the VPC network to be migrated to, and then use this method to smoothly migrate your system to the VPC. After all the resources have been migrated to VPC, release the cloud resources in the classic network to complete the whole migration process. For more information, see [Example of hybrid access and hybrid adding migration](reseller.en-US/Best practices/Migrate from the classic network to VPC/Example of hybrid access and hybrid adding migration.md#).
 
 -   **Hybrid addition**
 
