@@ -1,8 +1,8 @@
-# CreateRouterInterface {#reference_i422w_xmt_ndb .reference}
+# CreateRouterInterface {#reference_i4w_xmt_ndb .reference}
 
 Create a router interface.
 
-When calling this interface to create a router interface, note:
+When calling this API to create a router interface, note:
 
 -   Up to one pair of interconnected router interfaces can be created between two VRouters.
 
@@ -10,17 +10,16 @@ When calling this interface to create a router interface, note:
 
 -   If there is a delinquent router interface in your account, you can no longer create router interfaces.
 
--   The destination CIDR blocks \(DestinationCidrBlock\) of route entries in a route table cannot be the same.
+-   The destination CIDR blocks of \(DestinationCidrBlock\) of the route entries in the same route table cannot be the same.
 
 -   The router interface created for a Virtual Border Router \(VBR\) must act as the connection initiator.
 
--   If you want to create a router interface for a VBR, the VBR must be in the Active status.
 
 ## Request parameters {#section_cch_pjg_mdb .section}
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Action|String|Yes| The action to perform. Valid value: 
+|Action|String|Yes| The action to perform. Valid value:
 
  CreateRouterInterface
 
@@ -30,7 +29,7 @@ When calling this interface to create a router interface, note:
  You can obtain the region ID by calling the DescribeRegions API.
 
  |
-|RouterType|String|Yes| The type of the router that the peer router interface associates with. Valid value:
+|RouterType|String|Yes| The type of the router associated with the router interface. Valid values:
 
  -   VRouter: VRouter
 
@@ -38,59 +37,61 @@ When calling this interface to create a router interface, note:
 
 
  |
-|AccessPointId|String|No| The ID of the access point of the peer router interface.
+|AccessPointId|String|No| The ID of the access point to which the VBR belongs.
 
- You can obtain the ID of the access point of the physical connection by calling the  DescribeAccessPoints API.
+ You can obtain the region ID by calling the DescribeAccessPoints API.
 
  **Note:** You must specify this parameter in the scenario of physical access.
 
  |
-|RouterId|String|Yes| The ID of the VRouter associated with the router interface.
+|RouterId|String|Yes| The ID of the router associated with the router interface.
 
  |
 |Role|String|Yes| The role of the router interface. Valid value:
 
  -   InitiatingSide: Connection initiator.
 
--   AcceptingSide:  Connection receiver.
+-   AcceptingSide: Connection receiver.
 
 
  |
-|Spec|String|Yes| The specification of the router interface. The following are available specifications and the corresponding bandwidth:
+|Spec|String|Yes| The specification of the router interface. The following are available specifications and the corresponding bandwidths:
 
- -   Mini. 2：2 Mbps
+ -   Mini. 2: 2 Mbps
 
--   Mini. 5：5 Mbps
+-   Mini. 5: 5 Mbps
 
--   Small. 1：10 Mbps
+-   Small 1: 10 Mbps
 
--   Small. 2：20 Mbps
+-   Small 2: 20 Mbps
 
--   Small. 5：50 Mbps
+-   Small 5: 50 Mbps
 
--   Middle. 1：100 Mbps
+-   Middle. 1: 100 Mbps
 
--   Middle. 2：200 Mbps
+-   Middle. 2: 200 Mbps
 
--   Middle. 5：500 Mbps
+-   Middle. 5: 500 Mbps
 
--   Large. 1： 1000 Mbps
+-   Large. 1: 1000 Mbps
 
--   Large. 2：2000 Mbps
+-   Large. 2: 2000 Mbps
 
--   Large. 5： 5000 Mbps
+-   Large. 5: 5000 Mbps
 
--   Xlarge. 1：10000 Mbps
+-   Xlarge. 1: 10000 Mbps
+
+**Note:** The value of Spec is Negative when the role is AcceptingSide.
 
 
  |
 |OppositeRegionId|String|Yes| The region of the connection receiver.
 
  |
-|OppositeAccessPointId|String|No|The ID of the access point of the peer router interface. **Note:** This parameter is required when the peer router interface is on a VBR and cannot be modified after the router interface is created.
+|OppositeAccessPointId|String|No|The ID of the access point of the peer router interface.**Note:** This parameter is required when the peer router interface is on a VBR and cannot be modified after the router interface is created.
 
 |
-|OppositeRouterType|String|No| The type of the router associated with the peer router interface. Valid value:
+|OppositeRouterType|String|No| The type of the router associated with the peer router interface. Valid values:
 
  -   VRouter: VRouter
 
@@ -104,38 +105,38 @@ When calling this interface to create a router interface, note:
 |OppositeInterfaceId|String|No| The ID of the peer router interface.
 
  |
-|OppositeInterfaceOwnerId|String|No| The account ID of the owner of the peer router interface.
+|OppositeInterfaceOwnerId|String|No| The ID of the owner of the peer router interface.
 
  |
-|HealthCheckSourceIp|String|No| The source IP address used to perform health check on the physical connection. It must be an unused IP address of the VPC where local router interface is located.
+|HealthCheckSourceIp|String|No| The source IP address used to perform health check. It must be an unused IP address of the local VPC.
 
  **Note:** You can specify this parameter in the scenario of physical access.
 
  |
-|HealthCheckTargetIp|String|No| The destination IP address used to perform health check on the physical connection.
+|HealthCheckTargetIp|String|No| The destination IP address of health check.
 
  **Note:** This parameter is required when the HealthCheckSourceIp parameter is specified.
 
  |
 |Name|String|No| The name of the router interface.
 
- The name can contain from 2 to 128 characters including a-z, A-Z, 0-9, underlines, and hyphens. The name must start with an English letter, but cannot start with `http://` or `https://`.
+ The name can contain 2-128 characters including a-z, A-Z, 0-9, periods, underscores, and hyphens. It must start with English letters, but cannot start with `http://` or `https://`.
 
  |
 |Description|String|No| The description of the router interface.
 
- The description can contain from 2 to 256 characters. The description must start with English letters, but cannot start with `http://` or `https://`.
+ The description can contain 2-256 characters. It must start with English letters, but cannot start with `http://` or `https://`.
 
  |
-|InstanceChargeType|String|No| The billing method of the router interface. Valid value:
+|InstanceChargeType|String|No| The billing method of the router interface. Valid values:
 
- -   PostPaid \(Default\): Pay-As-You-Go
+ -   PostPaid \(default\): Pay-As-You-Go
 
 
  |
-|ClientToken|String|No| A client token used to guarantee the idempotence of requests. 
+|ClientToken|String|No| A client token used to guarantee the idempotence of requests.
 
- This parameter value is generated by the client and must be unique. It cannot exceed 64 ASCII characters.
+ This parameter value is generated by the client and is guaranteed to be unique among different requests. The maximum length is 64 ASCII characters.
 
  |
 
@@ -169,19 +170,19 @@ https://vpc.aliyuncs.com/?Action=CreateRouterInterface
 
     ```
     <? xml version="1.0" encoding="UTF-8"? >
-                            <CreateRouterInterfaceResponse>
+    <CreateRouterInterfaceResponse>
         <RequestId>980960B0-2969-40BF-8542-EBB34FD358AB</RequestId>
         <RouterInterfaceId>ri-2ze7fbuohmxxxxxx</RouterInterfaceId>
-                            </CreateRouterInterfaceResponse>
+    </CreateRouterInterfaceResponse>
     ```
 
 -   JSON format
 
     ```
-     
+    { 
         "RequestId": "980960B0-2969-40BF-8542-EBB34FD358AB"
         "RouterInterfaceId": "ri-2ze7fbuohmxxxxxx"
-    
+    }
     ```
 
 
