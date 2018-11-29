@@ -69,7 +69,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:------------|
     |0.0.0.0/0|ECS instance|ECS01|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688838810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1543493493810_en-US.png)
 
 -   VPC interconnection \(Express Connect\)
 
@@ -87,7 +87,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|Router interface \(To VPC\)|VPC 1|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688838811_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1543493493811_en-US.png)
 
 
 -   VPC interconnection \(VPN Gateway\)
@@ -129,7 +129,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
         |:---------------------|:------------|:-------|
         |172.16.0.0/12|—|Local gateway|
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15396888386425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/15434934936425_en-US.png)
 
 -   Local connection \(VPN Gateway\)
 
@@ -139,7 +139,7 @@ The route entries with the destination of `100.64.0.0/10` and `192.168.0.0/24` a
     |:---------------------|:------------|:-------|
     |192.168.0.0/16|VPN metric reference|VPN Gateway|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1539688839814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2437/1543493493814_en-US.png)
 
 
 ## Add custom route entry {#section_k5r_n5y_rdb .section}
@@ -162,7 +162,7 @@ Applicable to the scenario where traffic destined for the specified network is r
 
     -   **VPN Gateway**: Route the traffic destined for the specified IP address range to the selected VPN Gateway.
 
-    -   **Secondary ENI**：Route the traffic destined for the specified IP address range to the selected secondary ENI.
+    -   **Secondary ENI**: Route the traffic destined for the specified IP address range to the selected secondary ENI.
 
     -   **Router Interface \(To VPC\)**: Route the traffic destined for the specified IP address range to the selected VPC.
 
