@@ -13,7 +13,7 @@ For more information, see [Migrate from the classic network to VPC](https://help
 
 ## Prerequisites {#section_vcx_2w5_sdb .section}
 
--   The access mode of the instance is the safe connection mode. For more information, see . MySQL 5.7, SQL Server 2012 and SQL Server The 2016 version only support the standard mode. This mode supports changing the network type.
+-   The access mode of the instance is the safe connection mode. For more information, see . MySQL 5.7, SQL Server 2012, and SQL Server 2016 version only support the standard mode. This mode supports changing the network type.
 
 -   The network type is the classic network.
 
@@ -22,8 +22,8 @@ For more information, see [Migrate from the classic network to VPC](https://help
 
 ## Change the network type on the console {#section_p5v_fw5_sdb .section}
 
-1.  Log on to the RDS Console.
-2.  Select the region where the target instance is located.
+1.  Log on to the RDS Management Console.
+2.  Select the region of the target instance.
 3.  Click the ID of the target instance.
 4.  In the left-side navigation pane, select **Database Connection**.
 5.  In the Instance Connection tab, click **Switch to VPC**.
@@ -36,14 +36,17 @@ For more information, see [Migrate from the classic network to VPC](https://help
 
 8.  Click **OK**. A **Retained Connection Address of the Classic Network** is added on the console.
 
+    ![](images/842_en-US.png)
+
+
 ## Modify the retention time {#section_pnk_cx5_sdb .section}
 
 After setting the retention time for the classic network endpoint, you can extend its retention time through the console before it expires.
 
 During the hybrid access period, you can change the retention time of the classic network endpoint at any time as needed. The expiration time will be calculated from the date the change occurs. For example, if the classic network endpoint is set to expire on August 18, 2017 and you change the expiration date to 14 days later on August 15, 2017, the endpoint will be released on August 29, 2017.
 
-1.  Log in to the RDS Console.
-2.  Select the region where the target instance is located.
+1.  Log on to the RDS Console.
+2.  Select the region of the target instance.
 3.  Click the ID of the target instance.
 4.  In the left-side navigation pane, select **Database Connection**.
 5.  In the Instance Connection tab, click **Change Expiration time**.
@@ -64,24 +67,24 @@ During the hybrid access period, you can change the retention time of the classi
 
     |Name|Type|Required|Description|
     |:---|:---|:-------|:----------|
-    |Action|String| Yes|The action to perform. Valid value:ModifyDBInstanceNetworkType
+    |Action|String|Yes|The action to perform. Valid value:ModifyDBInstanceNetworkType
 
 |
-    |DBInstanceId|String| Yes|The ID of the instance.|
-    |InstanceNetworkType|String| Yes|The network type of the instance.    -   VPC: An instance of the VPC network.
+    |DBInstanceId|String|Yes|The ID of the instance.|
+    |InstanceNetworkType|String|Yes|The network type of the instance:    -   VPC: An instance of the VPC network.
 
     -   Classic: An instance of the classic network.
 
 |
     |VPCId|String|No|The ID of the VPC.|
     |VSwitchId|String|No|The ID of the VSwitch. This parameter must be specified if the VPC ID is specified.|
-    |PrivateIpAddress|String| No|Enter an IP address in the VSwitch CIDR block. If no IP address is entered, the system allocates an intranet IP address according to the VPC ID and the VSwitch ID.|
-    |RetainClassic|String| No| Whether to retain the classic network endpoint. The default value is False:
+    |PrivateIpAddress|String|No|Enter an IP address in the VSwitch CIDR block. If no IP address is entered, the system allocates an intranet IP address according to the VPC ID and the VSwitch ID.|
+    |RetainClassic|String|No| Whether to retain the classic network endpoint. The default value is False:
 
     -   True: Retain
     -   False: Do not retain
  |
-    |ClassicExpiredDays|String| No| The retention time of the classic network endpoint. The shortest time is 1 day, the longest time is 120 days, and the default value is 7 days.
+    |ClassicExpiredDays|String|No| The retention time of the classic network endpoint. The shortest time is 1 day, the longest time is 120 days, and the default value is 7 days.
 
  This parameter must be specified if RetainClassic is set to True.
 
@@ -91,7 +94,7 @@ During the hybrid access period, you can change the retention time of the classi
 
     |Name|Type|Description|
     |:---|:---|:----------|
-    |RequestId|String |The ID of the request.|
+    |RequestId|String|The ID of the request.|
     |TaskId|String|The ID of the task.|
 
     **Example code**
@@ -118,18 +121,18 @@ During the hybrid access period, you can change the retention time of the classi
          ModifyDBInstanceNetworkTypeRequest request=new ModifyDBInstanceNetworkTypeRequest ();
              request.setInstanceId("<Your instance ID>");
              request.setInstanceNetworkType ("VPC");
-             request. setVPCId("<VpcId:This parameter is required when the TargetNetworkType is VPC>");
+             request. setVPCId("<VpcId: This parameter is required when the TargetNetworkType is VPC>");
              request.setVSwitchId("<VSwitchId: This parameter is required when the TargetNetworkType is VPC>");
-             request.setRetainClassic("<Whether to retain the classic network endpoint.>");
+             request.setRetainClassic("<Whether to retain the classic network endpoint>");
              request.setClassicExpiredDays("The retention time of the classic network endpoint");
              IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou", "<Your AK>",
-                 <Your Security>");
+                 "<Your Security>");
              IAcsClient client = new DefaultAcsClient(profile);
          try {
                  ModifyDBInstanceNetworkTypeResponse response
                      response = client.getAcsResponse(request);
                  System.out.println(response.getRequestId());
-         } catch (ServerException e) {
+         }catch (ServerException e) {
                  e.printStackTrace();
          }
              } catch (ClientException e) {
@@ -145,17 +148,17 @@ During the hybrid access period, you can change the retention time of the classi
 
     |Name|Type|Required|Description|
     |:---|:---|:-------|:----------|
-    |Action|String| Yes|The action to perform. Valid value:DescribeDBInstanceNetInfo
+    |Action|String|Yes|The action to perform. Valid value:DescribeDBInstanceNetInfo
 
 |
-    |DBInstanceId|String| Yes|The ID of the instance.|
+    |DBInstanceId|String|Yes|The ID of the instance.|
 
     **Response parameters**
 
     |Name|Type|Description|
     |:---|:---|:----------|
-    |DBInstanceNetInfos|List|A list of the network information of the instance.|
-    |InstanceNetworkType|String|The network type of the instance.    -   VPC: An instance of the VPC network.
+    |DBInstanceNetInfos|List|The connection information of the instance.|
+    |InstanceNetworkType|String|The network type of the instance:    -   VPC: An instance of the VPC network.
 
     -   Classic: An instance of the classic network.
 
@@ -165,8 +168,8 @@ During the hybrid access period, you can change the retention time of the classi
 
     |Name|Type|Description|
     |:---|:---|:----------|
-    |ConnectionString|String|The connection string of DNS.|
-    |IPAddress|String|IP address.|
+    |ConnectionString|String|The DNS connection string.|
+    |IPAddress|String|The IP address.|
     |IPType|String| The IP type of an instance of the classic network: Inner | Public.
 
  The IP type of an instance of the VPC network: Private | Public.
@@ -177,7 +180,7 @@ During the hybrid access period, you can change the retention time of the classi
     |VSwitchId|String|The ID of the VSwitch.|
     |ExpiredTime|String|The time of expiration.|
 
-    **Example code**
+    **Reference code**
 
     ```
     import com.aliyuncs.IAcsClient;
@@ -198,9 +201,9 @@ During the hybrid access period, you can change the retention time of the classi
              IAcsClient client = new DefaultAcsClient(profile);
              try {
                  DescribeDBInstanceNetInfoResponse response
-                     response = client.getAcsResponse(request);
+                     = client.getAcsResponse(request);
                  System.out.println(response.getRequestId());
-         } catch (ServerException e) {
+         }catch (ServerException e) {
                  e.printStackTrace();
          }
              } catch (ClientException e) {
@@ -222,24 +225,24 @@ During the hybrid access period, you can change the retention time of the classi
 
 2.  Call the ModifyDBInstanceNetworkExpireTime API to modify the retention time of the classic network endpoint.
 
-    **Description on Request Parameter**
+    **Request parameters**
 
-    |Name|Type|Required|Field description|
-    |:---|:---|:-------|:----------------|
-    |Action|String| Yes|required parameter. Value:Change the expiration time of the original classic endpoint
+    |Name|Type|Required|Description|
+    |:---|:---|:-------|:----------|
+    |Action|String|Yes|The action to perform. Valid value:ModifyDBInstanceNetworkExpireTime
 
 .|
-    |DBInstanceId|String| Yes|ID of the target RDS instance.|
-    |ConnectionString|String| Yes|The classic network connection string to be postponed. There are two string types: the classic network endpoint of the current instance and the classic network endpoint separating reading and writing|
-    |ClassicExpiredDays|Interger| Yes|The retention time of the classic network endpoint is \[1-120\] days.|
+    |DBInstanceId|String|Yes|The ID of the instance.|
+    |ConnectionString|String|Yes|The classic network connection string to be postponed. There are two string types: the classic network endpoint of the current instance and the classic network endpoint separating reading and writing.|
+    |ClassicExpiredDays|Integer|Yes|The retention time of the classic network endpoint is \[1-120\] days.|
 
     **Response parameters**
 
     |Name|Type|Description|
     |:---|:---|:----------|
-    |RequestId|String |The ID of the request.|
+    |RequestId|String|The ID of the request.|
 
-    **Example code**
+    **Reference code**
 
     ```
     public static void main(String[] args) {
@@ -255,7 +258,7 @@ During the hybrid access period, you can change the retention time of the classi
              ModifyDBInstanceNetExpireTimeResponse response
                      = client.getAcsResponse(request);
              System.out.println(response.getRequestId());
-         } catch (ServerException e) {
+         }catch (ServerException e) {
              e.printStackTrace();
          }
          } catch (ClientException e) {
