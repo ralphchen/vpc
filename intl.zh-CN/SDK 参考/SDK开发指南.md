@@ -9,7 +9,6 @@
 |Java SDK|[VPC Java SDK](https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-vpc)|[快速开始](../../../../intl.zh-CN/Java SDK/快速开始.md#)|
 |Python SDK|[VPC Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/tree/master/aliyun-python-sdk-vpc)|[快速开始](../../../../intl.zh-CN/Python SDK/快速开始.md#)|
 |Go SDK|[VPC Go SDK](https://github.com/aliyun/alibaba-cloud-sdk-go/tree/master/services/vpc)|[快速开始](../../../../intl.zh-CN/Go SDK/快速开始.md#)|
-|C++ SDK|[VPC C++ SDK](https://github.com/aliyun/aliyun-openapi-cpp-sdk/tree/master/vpc)|[快速开始](../../../../intl.zh-CN/C++ SDK/快速开始.md#)|
 |C\# SDK|[VPC C\# SDK](https://github.com/aliyun/aliyun-openapi-net-sdk/tree/master/aliyun-net-sdk-vpc)|[快速开始](../../../../intl.zh-CN/Node.js SDK/快速开始.md#)|
 |PHP SDK|[VPC PHP SDK](https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-vpc)|[快速开始](../../../../intl.zh-CN/PHP SDK/快速开始.md#)|
 
