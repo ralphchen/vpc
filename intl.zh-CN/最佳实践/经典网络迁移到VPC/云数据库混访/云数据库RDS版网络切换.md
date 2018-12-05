@@ -2,7 +2,7 @@
 
 本文档介绍了如何通过控制台和API将云数据库RDS版的网络类型切换至专有网络，同时保留经典网络的访问地址。
 
-关于RSD平滑迁移网络的原理介绍，请参见[经典网络平滑迁移到VPC的混访方案](https://help.aliyun.com/document_detail/57978.html)。
+关于RSD平滑迁移网络的原理介绍，请参见[经典网络平滑迁移到VPC的混访方案](../../../../intl.zh-CN/用户指南/数据库连接/经典网络平滑迁移到VPC的混访方案.md#)。
 
 **说明：** 
 
@@ -36,7 +36,7 @@
 
 8.  单击**确定**，控制台会增加**保留的经典网络地址**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2461/1543494021842_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/2461/1543980205842_zh-CN.png)
 
 
 ## 通过控制台修改经典网络内网地址使用期限 {#section_pnk_cx5_sdb .section}
